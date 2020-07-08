@@ -12,11 +12,49 @@
 .scOne-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 350px;
     width: 50%;
-    background-color: tomato;
+}
+
+.scOne-left h1 {
+    font-size: 40px;
+    color: #4b4b4b;
+}
+
+.scOne-left p {
+    font-size: 20px;
+    color: #9a8ebf;
+}
+
+.scOne-left div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btnIndex {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    width: 220px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    background-color: #7159c1;
+    padding: 1px;
+    font-weight: bold;
+}
+
+.btnIndex:hover {
+    background-color: #8167d8;
 }
 
 .scOne-right {
@@ -26,7 +64,6 @@
     align-items: center;
     width: 50%;
     height: 350px;
-    background-color: violet;
 }
 
 .scOne-right img {

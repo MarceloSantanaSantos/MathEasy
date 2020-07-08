@@ -20,10 +20,10 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in orci mauris. In sed vulputate risus, sed facilisis eros. Etiam enim lacus, fringilla ut risus quis, eleifend efficitur enim.
             </p>
-            <a href="#" class="btnIndex">Professor - Entrar</a>
-            <a href="./page/entrarProfessor.php">Professor - Cadastrar-se</a>
-            <a href="#" class="btnIndex">Aluno - Entrar</a>
-            <a href="./page/entrarAluno.php">Aluno - Cadastrar-se</a>
+            <div>
+                <a href="./page/entrarProfessor.php" class="btnIndex">Sou Professor</a>
+                <a href="./page/entrarAluno.php" class="btnIndex">Sou Aluno</a>
+            </div>
         </div>
         <div class="scOne-right">
             <img src="./img/calc.png">

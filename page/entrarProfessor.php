@@ -49,8 +49,8 @@
             <article class="logProfessor">
                 <form action="" method="post" name="fmrLogProf" id="fmrLogProf">
                     <!-- Campo de Informações -->
-                    <input type="text" name="emailProf" id="emailProf" placeholder="E-mail">
-                    <input type="text" name="senhaProf" id="senhaProf" placeholder="Senha">
+                    <input type="text" name="emailProf" id="emailLogProf" placeholder="E-mail">
+                    <input type="text" name="senhaProf" id="senhaLogProf" placeholder="Senha">
                     <!-- Botão Login -->
                     <a href="#" onclick="logarProfessor('logarProfessor');">Entrar</a>
                 </form>
@@ -73,4 +73,4 @@
     </body>
 </html>
 
-<script src="../script/scriptProfessor.js"></script>
+<script src="../script/scriptEntrar.js"></script>
