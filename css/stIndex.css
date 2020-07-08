@@ -1,0 +1,130 @@
+/* ########################### SECTION 1 ########################### */
+
+.secOne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    padding: 50px 120px;
+}
+
+.scOne-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 50%;
+    background-color: tomato;
+}
+
+.scOne-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 350px;
+    background-color: violet;
+}
+
+.scOne-right img {
+    width: 270px;
+}
+
+/* ########################### SECTION 2 ########################### */
+
+.secTwo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    padding: 50px 120px;
+    background-color: #7159c1;
+}
+
+.scTwo-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 350px;
+    width: 50%;
+}
+
+.scTwo-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 350px;
+
+}
+
+.scTwoContentText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 220px;
+}
+
+.scTwo-right h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.scTwo-right h3 {
+    color: #e4e4e4;
+}
+
+.scTwo-right p {
+    font-size: 18px;
+    color: #cfcece;
+}
+
+.scTwo-left img {
+    width: 270px;
+}
+
+/* ########################### SECTION 3 ########################### */
+
+.secThree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    padding: 50px 120px;
+}
+
+.scThree-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 22%;
+    width: 100%;}
+
+.scThree-up h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #4b4b4b;
+}
+
+.scThree-down {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 78%;
+    width: 100%;
+}
+
+.scThree-down p {
+    font-size: 18px;
+    color: #9a8ebf;
+}

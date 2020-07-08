@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* ########################### HEADER ########################### */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0px 120px;
+    background-color: #7159c1;
+}
+
+.hd-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.hd-left img,span {
+    color: white;
+    font-size: 19px;
+    font-weight: bolder;
+    width: 45px;
+}
+
+.hd-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.hd-right a {
+    font-size: 19px;
+    font-weight: bold;
+    color: #af9ee6;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+.hd-right a:hover {
+    color: white;
+}
+
+
+
+/* ########################### FOOTER ########################### */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #7159c1;
+    height: 200px;
+    padding: 0px 120px;
+}
+
+.ftUp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    background-color: #7159c1;
+    height: 150px;
+}
+
+.ftUp-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    padding: 15px 0px;
+    height: 130px;
+}
+
+.ftUp-left h3 {
+    color: white;
+}
+
+.ftUp-left p {
+    font-size: 17px;
+    color: white;
+}
+
+.ftUp-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    padding: 15px 0px;
+    height: 130px;}
+
+.ftUp-right h3 {
+    color: white;
+}
+
+.ftUp-right a {
+    text-decoration: none;
+    font-size: 17px;
+    margin: 2px;
+    color: rgb(199, 198, 198);
+}
+
+.ftUp-right a:hover {
+    color: white;
+}
+
+.ftDown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    height: 50px;
+    padding: 0px 120px;
+    color: #646464;
+}
+
+.ftDown-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 40%;
+}
+
+.ftDown-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+.ftDown-right a {
+    text-decoration: none;
+    color: #646464;
+}
+
+.ftDown-right a:hover {
+    color: rgb(53, 52, 52);
+}
