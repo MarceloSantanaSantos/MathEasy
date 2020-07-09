@@ -15,8 +15,9 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 450px;
+    height: 600px;
     padding: 20px 120px;
+    padding-bottom: 25px;
 }
 
 /* ##################### ASIDE  ##################### */
@@ -24,7 +25,7 @@ section {
 aside {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 40%;
     background-color: #7159c1;
     padding: 8px;
@@ -57,6 +58,12 @@ aside {
     background-color: whitesmoke;
 }
 
+.user img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
 .ptAside3 {
     display: flex;
     flex-direction: column;
@@ -66,25 +73,80 @@ aside {
     color: white;
 }
 
+.ptAside3 h4 {
+    font-size: 20px;
+}
+
+.ptAside3 h5 {
+    font-size: 17px;
+}
+
 .ptAside4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150px;}
+    height: 200px;}
 
 .ptAside4 form {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     color: white;
 }
 
+form input {
+    height: 25px;
+    width: 220px;
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 0px solid;
+}
+
+form a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100px;
+    color: #7159c1;
+    text-decoration: none;
+    background-color: rgb(209, 209, 209);
+    border-radius: 5px;
+}
+
+form a:hover {
+    color: #41336e;
+    background-color: white;
+}
+
 /* ##################### ARTICLE  ##################### */
 
 article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 55%;
-    background-color: violet;
 }
+
+article table {
+    width: 100%;
+    border-left: 4px solid #7159c1;
+}
+
+th {
+    padding: 10px;
+    color: #7159c1;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    color: #7d65c9;
+}
+

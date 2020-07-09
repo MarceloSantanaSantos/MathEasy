@@ -1,5 +1,6 @@
 <?php
     $msgProfessor = "";
+
     require_once("../dbase/dbconn.php");
     require_once("../class/clsBancoDados.class.php");
     require_once("../class/clsProfessor.class.php");
@@ -12,12 +13,15 @@
 
     if ($_POST) {
         $acaoProfessor = "";
+        
         // Verificando se o parẫmetro acaoProfessor existe na URL
         if (isset($_REQUEST["acaoProfessor"])) {
             $acaoProfessor = $_REQUEST["acaoProfessor"];
         }
+
         // Criando objeto para representar classe professor
         $objProfessor = new professor();
+
         // Recuperar todos os dados que o usuário digitou e enviando para os atributos da classe professor
         $objProfessor->nomeProf = $_REQUEST["nomeProf"];
         $objProfessor->emailProf = $_REQUEST["emailProf"];
