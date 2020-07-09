@@ -19,7 +19,7 @@
                     $retorno = true;
                 }
                 else {
-                    $this->strerro = "Problema com a gravação dos dados do Professor";
+                    $this->strerro = "Problema com a gravação dos dados do Professor.";
                     $retorno = false;
                 }
                 return $retorno;

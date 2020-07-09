@@ -12,13 +12,13 @@
 
     if ($_POST) {
         $acaoProfessor = "";
-        // Verificando de o parẫmetro acaoProfessor existe na URL
+        // Verificando se o parẫmetro acaoProfessor existe na URL
         if (isset($_REQUEST["acaoProfessor"])) {
             $acaoProfessor = $_REQUEST["acaoProfessor"];
         }
         // Criando objeto para representar classe professor
         $objProfessor = new professor();
-        // Recuperar todos os dados que o usuário digitpu e enviando para os atributos da classe professor
+        // Recuperar todos os dados que o usuário digitou e enviando para os atributos da classe professor
         $objProfessor->nomeProf = $_REQUEST["nomeProf"];
         $objProfessor->emailProf = $_REQUEST["emailProf"];
         $objProfessor->senhaProf = $_REQUEST["senhaProf"];
@@ -27,6 +27,10 @@
         if ($acaoProfessor == 'cadastrarProfessor') {
             if ($objProfessor->getGravarProfessor()) {
                 $msgProfessor = "Professor cadastrado com sucesso.";
+                echo    "<script language='javascript' type='text/javascript'>
+                            alert ('Professor cadastrado com sucesso.');
+                            window.location.href='../page/professorEscola.php'
+                        </script>";
             }
             else {
                 $msgProfessor = $objProfessor->getErro();
@@ -65,7 +69,7 @@
                     <!-- Botão Cadastro -->
                     <a href="#" onclick="cadastrarProfessor('cadastrarProfessor');">Cadastrar</a>
                 </form>
-                <div>
+                <div> 
                     <?php echo $msgProfessor; ?>
                 </div>
             </article>

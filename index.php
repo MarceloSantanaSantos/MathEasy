@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="./css/molde.css">
     <link rel="stylesheet" href="./css/stIndex.css">
     <title>Math Easy</title>
+    <style> .ativado { color: white;} </style>
 </head>
 <body>
     <!-- HEADER -->
-    <?php require_once("./page/header.php");?>
+    <header>
+    <div class="hd-left">
+        <img src="img/icon.png">
+        <span><strong>MATH<br>EASY</strong></span>
+    </div>
+    <div class="hd-right">
+        <a style="color: white;" href="index.php">Início</a>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Suporte</a>
+    </div>
+</header>
     <!-- SECTION 01 -->
     <section class="secOne">
         <div class="scOne-left">
@@ -29,6 +40,7 @@
             <img src="./img/calc.png">
         </div>
     </section>
+    <!-- SECTION 02 -->
     <section class="secTwo">
         <div class="scTwo-left">
             <img src="./img/comp.png">
@@ -47,6 +59,7 @@
             </div>
         </div>
     </section>
+    <!-- SECTION 03 -->
     <section class="secThree">
         <div class="scThree-up">
             <h1>Sobre o Projeto Math Easy</h1>
@@ -61,7 +74,7 @@
             </p>
         </div>
     </section>
+    <!-- FOOTER -->
     <?php require_once("./page/footer.php")?>
-    
 </body>
 </html>

@@ -1,9 +1,55 @@
+<?php
+    $msgAluno = "";
+    require_once("../dbase/dbconn.php");
+    require_once("../class/clsBancoDados.class.php");
+    require_once("../class/clsAluno.class.php");
+
+    // Variáveis Aluno
+    $idAluno = "";
+    $nomeAluno = "";
+    $emailAluno = "";
+    $senhaAluno = "";
+    $turmaAluno = "";
+
+    if ($_POST) {
+        $acaoAluno = "";
+        // Verificando se o parâmetro acaoAluno existe na URL
+        if (isset($_REQUEST["acaoAluno"])) {
+            $acaoAluno = $_REQUEST["acaoAluno"];
+        }
+        // Criando objetivo para representar classe aluno
+        $objAluno = new aluno();
+        // Verificar qual o parâmetro acaoAluno
+        if ($acaoAluno == 'cadastrarAluno') {
+            // Recuperar todos os dados que o usuário digitou e enviando para os atributos da classe aluno
+            $objAluno->nomeAluno = $_REQUEST["nomeAluno"];
+            $objAluno->emailAluno = $_REQUEST["emailAluno"];
+            $objAluno->senhaAluno = $_REQUEST["senhaAluno"];
+            $objAluno->turmaAluno = $_REQUEST["turmaAluno"];
+            if ($objAluno->getGravarAluno()) {
+                $msgAluno = "Aluno cadastraro com sucesso.";
+            }
+            else {
+                $msgAluno = $objAluno->getErro();
+            }
+        }
+        else if ($acaoAluno == 'logarAluno') {
+            if ($objAluno->getConsultarAluno()) {
+                $msgAluno = "Login efetuado com sucesso.";
+            }
+            else {
+                $msgAluno = $objAluno->getErro();
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro - Aluno</title>
+        <title>Entrar - Aluno</title>
     </head>
     <body>
         <header></header>
@@ -14,7 +60,7 @@
                     <input type="text" name="emailAluno" id="emailLogAluno" placeholder="E-mail">
                     <input type="text" name="senhaAluno" id="senhaLogAluno" placeholder="Senha">
                     <!-- Botão Login -->
-                    <a href="#" onclick="logarAluno('logarAluno');">Entrar</a>
+                    <a href="#" id="logarAluno" name="logarAluno" onclick="logarAluno('logarAluno');">Entrar</a>
                 </form>
             </article>
             <article class="cadAluno">
@@ -24,8 +70,9 @@
                     <input type="text" name="emailAluno" id="emailAluno" placeholder="E-mail">
                     <input type="text" name="senhaAluno" id="senhaAluno" placeholder="Senha">
                     <input type="text" name="senhaAlunoC " id="senhaAlunoC" placeholder="Confirmar Senha">
+                    <input type="text" name="turmaAluno" id="turmaAluno" placeholder="Turma">
                     <!-- Botão Cadastro -->
-                    <a href="#" onclick="cadastrarAluno('cadastrarAluno');">Cadastrar</a>
+                    <a href="#" id="cadastrarAluno" name="cadastrarAluno" onclick="cadastrarAluno('cadastrarAluno');">Cadastrar</a>
                 </form>
                 <div>
                     <?php echo $msgAluno; ?>
