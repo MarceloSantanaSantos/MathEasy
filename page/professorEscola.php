@@ -1,69 +1,10 @@
-<?php 
-    $msgEscola = "";
-
-    require_once("../dbase/dbconn.php");
-    require_once("../class/clsBancoDados.class.php");
-    require_once("../class/clsProfessor.class.php");
-    require_once("../class/clsEscola.class.php");
-
-    // definições de host, database, usuário e senha
-    $host = "localhost";
-    $db   = "matheasy";
-    $user = "root";
-    $pass = "root";
-
-    // conecta ao banco de dados
-    $con = mysqli_connect($host, $user, $pass) or trigger_error(mysql_error(),E_USER_ERROR); 
-    $con = mysqli_connect($host,$user,$pass, $db);
-
-    // seleciona a base de dados em que vamos trabalhar
-    mysqli_select_db($con,$db);
-
-    // Variáveis Escola
-    $idEscola = "";
-    $nomeEscola = "";
-    $cidadeEscola = "";
-
-    // Dados Professor
-    $login = $_POST['emailProfessor'];
-    $login = $_POST['senhaProfessor'];
-
-    
-    if ($_POST) {
-        $acaoProfessor = "";
-
-        // Verificando se o parẫmetro acaoProfessor existe na URL
-        if (isset($_REQUEST["acaoProfessor"])) {
-            $acaoProfessor = $_REQUEST["acaoProfessor"];
-        }
-
-        // Criando objeto para representar classe escola
-        $objEscola  = new escola();
-
-        // Recuperar todos os dados que o usuário digitou e enviando para os atributos da classe escola
-        $objEscola->nomeEscola = $_REQUEST["nomeEscola"];
-        $objEscola->cidadeEscola = $_REQUEST["cidadeEscola"];
-        
-        // Verificar qual o parâmetro acaoProfessor
-        if ($acaoProfessor == 'adicionarEscola') {
-            if ($objEscola->getGravarEscola()) {
-                echo    "<script language='javascript' type='text/javascript'>
-                            alert ('Escola cadastrada com sucesso.');
-                            window.location.href='../page/professorEscola.php'
-                        </script>";
-            }
-            else {
-                $msgEscola = $objEscola->getErro();
-            }
-        }
+<?php
+    session_start();
+    if (!isset($_SESSION['idProf']))
+    {
+        header ("location: entrarProfessor.php");
+        exit;
     }
-
-    $query = sprintf("select nomeEscola, cidadeEscola from escola");
-    $dados = mysqli_query($con, $query) or die(mysql_error());
-    $linha = mysqli_fetch_assoc($dados);
-    $total = mysqli_num_rows($dados);
-
-    $queryProf = sprintf("select nomeProf from professor where")
 ?>
 
 <!DOCTYPE html>
@@ -112,19 +53,7 @@
                                 <th>NOME ESCOLA:</th>
                                 <th>CIDADE:</th>
                              </tr>";
-                        if ($total > 0) {
-                            do {
                     ?>
-                                <tr>
-                                    <td><?=$linha['nomeEscola']?></td>
-                                    <td><?=$linha['cidadeEscola']?></td>
-                                </tr>
-                    <?php
-                                // finaliza o loop que vai mostrar os dados
-                                }while($linha = mysqli_fetch_assoc($dados));
-                        // fim do if 
-                        }
-                        ?>
                 </table>
             </article>
         </section>

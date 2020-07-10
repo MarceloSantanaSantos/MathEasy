@@ -1,5 +1,3 @@
-CREATE TABLE professor (nomeProf VARCHAR (100) NOT NULL, emailProf VARCHAR (100) NOT NULL, senhaProf VARCHAR (50) NOT NULL, PRIMARY KEY (emailProf));
+CREATE TABLE professor (idProf INT (5) NOT NULL AUTO_INCREMENT,nomeProf VARCHAR (100) NOT NULL, emailProf VARCHAR (100) NOT NULL, senhaProf VARCHAR (50) NOT NULL, PRIMARY KEY (idProf));
 
-CREATE TABLE aluno (nomeAluno VARCHAR (100) NOT NULL, emailAluno VARCHAR (100) NOT NULL, senhaAluno VARCHAR (50) NOT NULL, PRIMARY KEY (emailAluno));
 
-CREATE TABLE escola (nomeEscola VARCHAR(100) NOT NULL PRIMARY KEY, cidadeEscola VARCHAR(100) NOT NULL, FK_emailProf VARCHAR(100), CONSTRAINT FK_emailProf FOREIGN KEY (FK_emailProf) REFERENCES professor(emailProf));
