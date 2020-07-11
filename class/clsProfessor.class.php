@@ -3,6 +3,8 @@
 
         private $pdo;
         public $msgErro = "";
+        public $nomeProfessor;
+        public $emailProfessor;
 
         public function conectar($nome, $host, $usuario, $senha) 
         {
@@ -76,6 +78,25 @@
             {
                 return false;
                 // Não foi possível logar
+            }
+        }
+
+        public function perfilProfessor($idProf)
+        {
+            global $pdo;
+
+            $sql = $pdo->prepare("select * from professor where idProf = :e");
+            $sql->bindValue(":e",$idProf);
+            $sql->execute();
+            if ($sql->rowCount() > 0)
+            {
+                $dado = $sql->fetch();
+                $nomeProfessor = $dado['nomeProf'];
+                return $nomeProfessor;
+            }
+            else 
+            {
+                return false;
             }
         }
     }

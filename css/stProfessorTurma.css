@@ -112,7 +112,7 @@ form input {
     border: 0px solid;
 }
 
-.gerenciarEscola {
+.gerenciarTurma {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -120,7 +120,7 @@ form input {
     width: 227px;
 }
 
-.btnEscola {
+.btnTurma{
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -135,12 +135,12 @@ form input {
     margin: 0;
 }
 
-.btnEscola:hover {
+.btnTurma:hover {
     color: #41336e;
     background-color: white;
 }
 
-.msgEscola {
+.msgTurma {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -176,7 +176,7 @@ td {
     color: #7d65c9;
 }
 
-.verTurmas {
+.verSalas {
     text-decoration: none;
     padding: 6px;
     border-radius: 5px;
@@ -184,6 +184,6 @@ td {
     background-color: rgb(127, 96, 179);
 }
 
-.verTurmas:hover {
+.verSalas:hover {
     background-color: rgb(167, 132, 230);
 }

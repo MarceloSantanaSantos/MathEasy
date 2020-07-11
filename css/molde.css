@@ -34,7 +34,12 @@ header {
     width: 50%;
 }
 
-.hd-left img,span {
+.hd-left a {
+    text-decoration: none;
+}
+
+.hd-left img,span{
+    text-decoration: none;
     color: white;
     font-size: 19px;
     font-weight: bolder;

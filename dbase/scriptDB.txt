@@ -1,3 +1,6 @@
 CREATE TABLE professor (idProf INT (5) NOT NULL AUTO_INCREMENT,nomeProf VARCHAR (100) NOT NULL, emailProf VARCHAR (100) NOT NULL, senhaProf VARCHAR (50) NOT NULL, PRIMARY KEY (idProf));
 
+CREATE TABLE escola (idEscola INT (5) NOT NULL AUTO_INCREMENT, nomeEscola VARCHAR (100) NOT NULL, cidadeEscola VARCHAR (100) NOT NULL, FK_idProf INT (5), PRIMARY KEY (idEscola), FOREIGN KEY (FK_idProf) REFERENCES professor(idProf));
+
+CREATE TABLE turma (idTurma INT (5) NOT NULL AUTO_INCREMENT, turma VARCHAR (5) NOT NULL, escolaTurma VARCHAR (100) NOT NULL, FK_idProf INT (5), FK_idEscola INT (5), PRIMARY KEY (idTurma), FOREIGN KEY (FK_idProf) REFERENCES professor(idProf), FOREIGN KEY (FK_idEscola) REFERENCES escola(idEscola));
 
