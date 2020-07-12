@@ -1,6 +1,6 @@
 <?php
      session_start();
-     if (!isset($_SESSION['idProf']))
+     if (!isset($_SESSION['idProf']) && !isset($_SESSION['IdEscolaTurma']))
      {
          header ("location: entrarProfessor.php");
          exit;
@@ -15,16 +15,22 @@
         require_once("../class/clsTurma.class.php");
         $t = new turma;
 
+        
+
 
         // ############### REQUISIÇÕES PROFESSOR ###############
         $nomeProfessor = "";
         $idProf = $_SESSION['idProf'];
-        $t->conectar("matheasy","localhost","root","root");
-        if ($t->msgErro == "")
+        $u->conectar("matheasy","localhost","root","root");
+        if ($u->msgErro == "")
         {
             $nomeProfessor = $u->perfilProfessor($idProf);
         }
         
+
+        // ############### REQUISIÇÕES ESCOLA ###############
+        $idEscolaTurma = $_GET['idEscolaTurma'];
+        $nomeEscolaTurma = $_GET['nomeEscolaTurma'];      
      }
 ?>
 
@@ -38,9 +44,9 @@
         <title>Math Easy - Turmas</title>
     </head>
     <body>
-        <?php require_once("headerLogado.php") ?>
+        <?php require_once("headerLogado.php"); ?>
         <div class="hdProfessor">
-            <h2>Professor - Sessão Turmas</h2>
+            <h2>Escola: <?php echo $nomeEscolaTurma; ?></h2>
         </div>
         <section>
         <aside>
@@ -61,8 +67,8 @@
                         <form action="" method="POST" id="fmrProfTur" name="fmrProfTur" >
                             <h3>Gerenciar Turmas</h3>
                             <!-- Campo de Informações -->
-                            <input type="text" id="nomeTurma" name="nomeTurma" placeholder="Turma">
-                            <input type="text" id="escolaTurma" name="escolaTurma" placeholder="Escola">
+                            <input type="text" id="ano" name="ano" placeholder="Ano">
+                            <input type="text" id="letra" name="letra" placeholder="Letra">
                             <!-- Botões Gerenciar Escola -->
                             <div class="gerenciarTurma">
                                 <input type="submit" value="Adicionar" name="add" class="btnTurma">
@@ -75,19 +81,16 @@
                                 //############### ADICIONAR TURMA ###############
                                 if (isset($_POST['add'])) 
                                 {
-                                    $turma = addslashes($_POST['nomeTurma']);
-                                    $escolaTurma = addslashes($_POST['escolaTurma']);
-                                    if (!empty($turma) && !empty($escolaTurma)) 
+                                    $ano = addslashes($_POST['ano']);
+                                    $letra = addslashes($_POST['letra']);
+                                    if (!empty($ano) && !empty($letra)) 
                                     {
                                         $t->conectar("matheasy", "localhost", "root", "root");
                                         if ($t->msgErro == "") 
                                         {
-                                            if ($t->cadastrarTurma($turma, $escolaTurma, $idProf))
+                                            if ($t->cadastrarTurma($ano, $letra, $idProf, $idEscolaTurma))
                                             {
-                                                echo "<script language='javascript' type='text/javascript'>
-                                                    alert('Turma adicionada com sucesso');
-                                                </script>";
-                                                header ("location: professorTurma.php");
+                                                header("Refresh: 0");
                                             }
                                             else 
                                             {
@@ -99,19 +102,20 @@
                                     }
                                     else 
                                     {
-                                        header ("location: professorTurma.php");
+                                        die();
+                                        // header("Refresh: 0");
                                     }
                                 }
                                 if (isset($_POST['rmv'])) 
                                 {
-                                    $turma = addslashes($_POST['nomeTurma']);
-                                    $escolaTurma = addslashes($_POST['escolaTurma']);
-                                    if (!empty($turma) && !empty($escolaTurma))
+                                    $ano = addslashes($_POST['ano']);
+                                    $letra = addslashes($_POST['letra']);
+                                    if (!empty($ano) && !empty($letra))
                                     {
                                         $t->conectar("matheasy", "localhost", "root", "root");
                                         if ($t->msgErro == "")
                                         {
-                                            if ($t->removerTurma($turma, $escolaTurma, $idProf))
+                                            if ($t->removerTurma($ano, $letra, $escolaTurma, $idProf))
                                             {
                                                 header ("location: professorTurma.php");
                                             }
@@ -137,23 +141,23 @@
                         <?php
                             echo "<tr>
                                     <th>TURMA:</th>
-                                    <th>ESCOLA:</th>
                                     <th>IR PARA:</th>
                                 </tr>";
                             $t->conectar("matheasy", "localhost", "root", "root");
                             if ($t->msgErro == "") 
                             {
-                                $turmas = $t->consultarTurma($idProf);
+                                $turmas = $t->consultarTurma($idEscolaTurma, $idProf);
 
                                 if ($turmas->rowCount() != 0)
                                 {
                                     while ($row=$turmas->fetch())
                                     {
+                                        
                                         echo "<tr>".
                                                 "<td>".$row['turma']."</td>".
-                                                "<td>".$row['escolaTurma']."</td>".
                                                 "<td>"."<a class='verSalas' href='professorSala.php'>Ver Sala</a>"."</td>".
                                             "</tr>";
+                                        
                                     }
                                 }
                                 else
@@ -164,7 +168,6 @@
                         ?>
                     </table>
                 </article>
-        </section>
-        <?php require_once("footer.php"); ?>
+        </section>        
     </body>
 </html>

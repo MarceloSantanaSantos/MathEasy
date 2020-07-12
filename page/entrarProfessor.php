@@ -8,21 +8,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/molde.css">
+        <link rel="stylesheet" href="../css/stEntrarMolde.css">
         <title>Entrar - Professor</title>
     </head>
     <body>
+        <?php require_once("header.php");?>
         <section>
             <article class="logProfessor">
+                <h2>LOGIN PROFESSOR</h2>
                 <form action="" method="post" name="fmrLogProf" id="fmrLogProf">
                     <!-- Campo de Informações -->
-                    <input type="text" name="emailLogProf" id="emailLogProf" placeholder="E-mail">
-                    <input type="password" name="senhaLogProf" id="senhaLogProf" placeholder="Senha">
+                    <input type="text" name="emailLogProf" id="emailLogProf" placeholder="E-mail" class="boxLogin">
+                    <input type="password" name="senhaLogProf" id="senhaLogProf" placeholder="Senha" class="boxLogin">
                     <!-- Botão Login -->
-                    <input type="submit" value="Entrar">
+                    <input type="submit" value="ENTRAR" class="btnLogin">
                 </form>
-                <p>Ainda não tem conta? <a href="cadProfessor.php">Crie aqui!</a></p>
+                <p>Não tem conta? <a href="cadProfessor.php">&nbsp;&nbsp;Cadastre-se já!&nbsp;&nbsp;</a></p>
             </article>
         </section>
+        <?php require_once("footer.php");?>
         <?php
             if (isset($_POST['emailLogProf'])) 
             {

@@ -179,6 +179,8 @@ td {
 .verTurmas {
     text-decoration: none;
     padding: 6px;
+    border: 0px solid;
+    box-shadow: 0px;
     border-radius: 5px;
     color: rgb(255, 255, 255);
     background-color: rgb(127, 96, 179);

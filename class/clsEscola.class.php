@@ -50,7 +50,7 @@
         {
             global $pdo;
 
-            $sql = $pdo->prepare("select nomeEscola, cidadeEscola from escola where FK_idProf = :f ");
+            $sql = $pdo->prepare("select * from escola where FK_idProf = :f ");
             $sql->bindValue(":f",$idProf);
             $sql->execute();
             if ($sql->rowCount() > 0) 
@@ -64,17 +64,13 @@
             global $pdo;
 
             $sql = $pdo->prepare("delete from escola where nomeEscola = :n and cidadeEscola = :c and FK_idProf = :f");
-            $sqlVerify = $pdo->prepare("select * from escola where nomeEscola = :nv and cidadeEscola = :cv and FK_idProf = :fv");
-            $sqlVerify->bindValue(":nv",$nomeEscola);
-            $sqlVerify->bindValue(":cv",$cidadeEscola);
-            $sqlVerify->bindValue(":fv",$idProf);
             $sql->bindValue(":n",$nomeEscola);
             $sql->bindValue(":c",$cidadeEscola);
             $sql->bindValue(":f",$idProf);
             $sql->execute();
-            $sqlVerify->execute();
-            if ($sqlVerify->rowCount() <= 0)
+            if ($sql->rowCount() > 0)
             {
+                
                 return true;
             }
             else 

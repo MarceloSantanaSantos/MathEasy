@@ -21,13 +21,15 @@
             
         }
 
-        public function cadastrarTurma($turma, $escolaTurma, $idProf)
+        public function cadastrarTurma($ano, $letra, $idProf, $idEscolaTurma)
         {
             global $pdo;
 
-            $sql = $pdo->prepare("select idTurma from turma where turma = :t and escolaTurma = :et");
-            $sql->bindValue(":t",$turma);
-            $sql->bindValue(":et",$escolaTurma);
+            $sql = $pdo->prepare("select idTurma from turma where ano = :a and letra = :l and FK_idProf = :fp and FK_idEscola = :f");
+            $sql->bindValue(":a",$ano);
+            $sql->bindValue(":l",$letra);
+            $sql->bindValue(":fp",$$idProf);
+            $sql->bindValue(":f",$idEscolaTurma);
             $sql->execute();
             if ($sql->rowCount() > 0)
             {
@@ -35,20 +37,22 @@
             }
             else 
             {
-                $sql = $pdo->prepare("insert into turma (turma, escolaTurma, FK_idProf) values (:t, :et, :fp)");
-                $sql->bindValue(":t",$turma);
-                $sql->bindValue(":et",$escolaTurma);
+                $sql = $pdo->prepare("insert into turma (ano, letra, FK_idProf, FK_idEscola) values (:a, :l: :fp, :f)");
+                $sql->bindValue(":a",$ano);
+                $sql->bindValue(":l",$letra);
                 $sql->bindValue(":fp",$idProf);
+                $sql->bindValue(":f",$idEscolaTurma);
                 $sql->execute();
                 return true;
             }
         }
 
-        public function consultarTurma($idProf) 
+        public function consultarTurma($idEscolaTurma ,$idProf) 
         {
             global $pdo;
 
-            $sql = $pdo->prepare("select turma, escolaTurma from turma where FK_idProf = :fp");
+            $sql = $pdo->prepare("select * from turma where FK_idEscola = :fe and FK_idProf = :fp");
+            $sql->bindValue(":fe",$idEscolaTurma);
             $sql->bindValue(":fp",$idProf);
             $sql->execute();
             if ($sql->rowCount() > 0)
@@ -76,6 +80,25 @@
                 return true;
             }
             else 
+            {
+                return false;
+            }
+        }
+
+        public function perfilTurma($idEscolaTurma)
+        {
+            global $pdo;
+
+            $sql = $pdo->prepare("select * from turma where FK_idEscola = :f");
+            $sql->bindValue(":f",$idEscolaTurma);
+            $sql->execute();
+            if ($sql->rowCount() > 0)
+            {
+                $dado = $sql->fetch();
+                $nomeEscola = $dado['escolaTurma'];
+                return $nomeEscola;
+            }
+            else
             {
                 return false;
             }

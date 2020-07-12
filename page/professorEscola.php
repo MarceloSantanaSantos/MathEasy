@@ -41,7 +41,7 @@
     <title>Math Easy - Escolas</title>
 </head>
     <body>
-        <?php require_once("headerLogado.php") ?>
+        <?php require_once("headerLogado.php"); ?>
         <div class="hdProfessor">
             <h2>Professor - Sessão Escolas</h2>
         </div>
@@ -105,6 +105,7 @@
                                     </script>";
                                 }
                             }
+                            //############### REMOVER ESCOLA ###############
                             if (isset($_POST['rmv'])) 
                             {
                                 $nomeEscola = addslashes($_POST['nomeEscola']);
@@ -116,7 +117,7 @@
                                     {
                                         if ($o->removerEscola($nomeEscola, $cidadeEscola, $idProf))
                                         {
-                                            header("location: professorEscola.php");
+                                            header("Refresh: 0");
                                         }
                                         else 
                                         {
@@ -144,7 +145,8 @@
                         echo "<tr>
                                 <th>NOME ESCOLA:</th>
                                 <th>CIDADE:</th>
-                                <th>IR PARA:</th>
+                                <th>CÓDIGO ESCOLA:</th>
+                                <th>VER TURMAS:</th>
                              </tr>";
                         $o->conectar("matheasy", "localhost", "root", "root");
                         if ($o->msgErro == "") 
@@ -155,10 +157,14 @@
                             {
                                 while ($row=$escolas->fetch())
                                 {
+                                    $idEscolaTurma = $row['idEscola'];
+                                    $nomeEscolaTurma = $row['nomeEscola'];
                                     echo "<tr>".
                                             "<td>".$row['nomeEscola']."</td>".
                                             "<td>".$row['cidadeEscola']."</td>".
-                                            "<td>"."<a class='verTurmas' href='professorTurma.php'>Ver Turmas</a>"."</td>".
+                                            "<td>".$row['idEscola']."</td>".
+                                            "<td>"."<a href='professorTurma.php?idEscolaTurma=$idEscolaTurma&nomeEscolaTurma=$nomeEscolaTurma' class='verTurmas'>Ver Turmas</a></td>".
+                                            // "<td>"."<form method='post'><input type='submit' id='vt' name='vt' value='Ver Turmas' class='verTurmas'></form>"."</td>".
                                          "</tr>";
                                 }
                             }
@@ -171,6 +177,5 @@
                 </table>
             </article>
         </section>
-        <?php require_once("footer.php"); ?>
     </body>
 </html>

@@ -6,7 +6,6 @@
     </div>
     <div class="hd-right">
         <a href="sair.php">Sair</a>
-        <a href="#">Sobre Nós</a>
-        <a href="#">Suporte</a>
+        <a href="professorEscola.php">Escolas</a>
     </div>
 </header>

@@ -1,0 +1,86 @@
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    width: 500px;
+    background-color: #7869ac;
+    border-radius: 5px;
+}
+
+article h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 80%;
+    color: white;
+    font-weight: 500;
+}
+
+article form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+}
+
+.boxLogin {
+    height: 18%;
+    width: 80%;
+    border: 0px solid;
+    background-color: mintcream;
+}
+
+.boxLogin::placeholder{
+    padding-left: 8px;
+    color: #7159c1;
+    font-size: 14px;
+}
+
+.btnLogin {
+    height: 20%;
+    width: 80%;
+    margin-top: 23px;
+    border: 0px solid;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #453675;
+    cursor: pointer;
+}
+
+.btnLogin:hover {
+    background-color: #5b4b8f;
+}
+
+article p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 80%;
+    color: aliceblue;
+}
+
+p a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+p a:hover {
+    color: #d6d6d6;
+}
