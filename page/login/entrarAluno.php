@@ -25,5 +25,43 @@
         </section>
     <!-- FOOTER -->
     <?php require_once("../parte/footer.php");?>
+    <?php 
+        // Verificar se usuário clicou no botão
+        if (isset($_POST['emailLogAluno']))
+        {
+            $emailLogAluno = addslashes($_POST['emailLogAluno']);
+            $senhaLogAluno = addslashes($_POST['senhaLogAluno']);
+            // Verificar se ps campos foram preenchidos
+            if (!empty($emailLogAluno) && !empty($senhaLogAluno))
+            {
+                $a->conectar("matheasy", "localhost", "root", "root");
+                if ($a->msgErro == "")
+                {
+                    if ($a->logarAluno($emailLogAluno, $senhaLogAluno))
+                    {
+                        header("location: ../aluno/alunoInicial.php");
+                    }
+                    else 
+                    {
+                        echo "<script language='javascript' type='text/javascript'>
+                                alert ('Campos incorretos');
+                                window.location('../page/login/entrarAluno.php');
+                              </script>";
+                    }
+                }
+                else 
+                {
+                    echo "Erro: ".$a->msgErro;
+                }
+            }
+            else
+            {
+                echo "<script language='javascript' type='text/javascript'>
+                alert ('Preencha os campos');
+                window.location('../page/login/entrarAluno.php');
+            </script>";
+            }
+        }
+    ?>
 </body>
 </html>

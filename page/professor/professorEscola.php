@@ -14,9 +14,7 @@
         require_once("../../class/clsEscola.class.php");
         $o = new escola;
 
-
-
-        // ############### Requisições Professor ###############
+        // ############### REQUISIÇÕES PROFESSOR ###############
 
         $nomeProfessor = "";
         $idProf = $_SESSION['idProf'];

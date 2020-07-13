@@ -16,7 +16,7 @@
     <?php require_once("../parte/header.php") ?>
     <section>
         <article>
-            <h2>LOGIN PROFESSOR</h2>
+            <h2>CADASTRO PROFESSOR(A)</h2>
             <form method="POST">
                 <input type="text" class="boxLogin" name="nomeCadProf" id="nomeCadProf" placeholder="Nome Completo">        
                 <input type="email" class="boxLogin" name="emailCadProf" id="emailCadProf" placeholder="E-mail">        
@@ -69,7 +69,7 @@
                         {
                             echo "<script language='javascript' type='text/javascript'>
                                     alert ('Preencha os campos');
-                                    window.location('../page/cadProfessor.php');
+                                    window.location('../page/cadastro/cadProfessor.php');
                                 </script>";
                         }
                     } 

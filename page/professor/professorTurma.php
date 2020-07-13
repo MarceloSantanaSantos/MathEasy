@@ -30,7 +30,7 @@
 
         // ############### REQUISIÇÕES ESCOLA ###############
         $idEscolaTurma = $_GET['idEscolaTurma'];
-        $nomeEscolaTurma = $_GET['nomeEscolaTurma'];      
+        $nomeEscolaTurma = $_GET['nomeEscolaTurma'];     
      }
 ?>
 
@@ -136,6 +136,7 @@
                             echo "<tr>
                                     <th>ANO:</th>
                                     <th>LETRA:</th>
+                                    <th>CÓDIGO TURMA:</th>
                                     <th>IR PARA:</th>
                                 </tr>";
                             $t->conectar("matheasy", "localhost", "root", "root");
@@ -150,7 +151,8 @@
                                         
                                         echo "<tr>".
                                                 "<td>".$row['ano']."</td>".                                                
-                                                "<td>".$row['letra']."</td>".                                                
+                                                "<td>".$row['letra']."</td>".   
+                                                "<td>".$row['idTurma']."</td>".                                             
                                                 "<td>"."<a class='verSalas' href='professorSala.php'>Ver Aluno</a>"."</td>".
                                             "</tr>";
                                         

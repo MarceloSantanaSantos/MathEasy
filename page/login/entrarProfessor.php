@@ -56,7 +56,10 @@
                 }
                 else 
                 {
-                    echo "Preencha todos os campos";
+                    echo "<script language='javascript' type='text/javascript'>
+                    alert ('Preencha os campos');
+                    window.location('../page/login/entrarProfessor.php');
+                </script>";
                 }
             }
         ?>
