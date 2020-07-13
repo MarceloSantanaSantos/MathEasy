@@ -1,5 +1,5 @@
 <?php
-    require_once("../class/clsProfessor.class.php");
+    require_once("../../class/clsProfessor.class.php");
     $u = new professor;
 ?>
 
@@ -8,12 +8,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/molde.css">
-        <link rel="stylesheet" href="../css/stEntrarMolde.css">
+        <link rel="stylesheet" href="../../css/molde.css">
+        <link rel="stylesheet" href="../../css/stEntrarMolde.css">
         <title>Entrar - Professor</title>
     </head>
     <body>
-        <?php require_once("header.php");?>
+        <?php require_once("../parte/header.php");?>
         <section>
             <article class="logProfessor">
                 <h2>LOGIN PROFESSOR</h2>
@@ -24,10 +24,10 @@
                     <!-- Botão Login -->
                     <input type="submit" value="ENTRAR" class="btnLogin">
                 </form>
-                <p>Não tem conta? <a href="cadProfessor.php">&nbsp;&nbsp;Cadastre-se já!&nbsp;&nbsp;</a></p>
+                <p>Não tem conta? <a href="../cadastro/cadProfessor.php">&nbsp;&nbsp;Cadastre-se já!&nbsp;&nbsp;</a></p>
             </article>
         </section>
-        <?php require_once("footer.php");?>
+        <?php require_once("../parte/footer.php");?>
         <?php
             if (isset($_POST['emailLogProf'])) 
             {
@@ -41,7 +41,7 @@
                     {
                         if($u->logarProfessor($emailLogProf,$senhaLogProf))
                         {
-                            header("location: professorEscola.php");
+                            header("location: ../professor/professorEscola.php");
                         }
                         else 
                         {

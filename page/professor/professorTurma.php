@@ -8,11 +8,11 @@
      else 
      {
         // ############### INFORMAÇÕES CLASSES ###############
-        require_once("../class/clsProfessor.class.php");
+        require_once("../../class/clsProfessor.class.php");
         $u = new professor;
-        require_once("../class/clsEscola.class.php");
+        require_once("../../class/clsEscola.class.php");
         $o = new escola;
-        require_once("../class/clsTurma.class.php");
+        require_once("../../class/clsTurma.class.php");
         $t = new turma;
 
         
@@ -39,12 +39,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/molde.css">
-        <link rel="stylesheet" href="../css/stProfessorTurma.css">
+        <link rel="stylesheet" href="../../css/molde.css">
+        <link rel="stylesheet" href="../../css/stProfessorTurma.css">
         <title>Math Easy - Turmas</title>
     </head>
     <body>
-        <?php require_once("headerLogado.php"); ?>
+        <?php require_once("../parte/headerLogado.php"); ?>
         <div class="hdProfessor">
             <h2>Escola: <?php echo $nomeEscolaTurma; ?></h2>
         </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="ptAside2">
                         <div class="user">
-                            <img src="../img/user.png" alt="">
+                            <img src="../../img/user.png" alt="">
                         </div>
                     </div>
                     <div class="ptAside3">

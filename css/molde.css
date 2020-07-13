@@ -36,6 +36,8 @@ header {
 }
 
 .hd-left a {
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
 }
 

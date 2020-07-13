@@ -1,5 +1,5 @@
 <?php
-    require_once('../class/clsProfessor.class.php');
+    require_once('../../class/clsProfessor.class.php');
     $u = new professor;
 ?>
 
@@ -8,9 +8,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/molde.css">
+    <link rel="stylesheet" href="../../css/stCadMolde.css">
     <title> Cadastro - Professor</title>
 </head>
 <body>
+    <?php require_once("../parte/header.php") ?>
     <section>
         <article>
             <form method="POST">
@@ -40,7 +43,10 @@
                                 {
                                     if($u->cadastrarProfessor($nomeCadProf,$emailCadProf,$senhaCadProf))
                                     {
-                                        echo "Cadastrado com sucesso, acesse para entrar";
+                                        echo "<script language='javascript' type='text/javascript'>
+                                                alert ('Cadastro efetuado com sucesso, entre para acessar');
+                                                window.location('../../index.php');
+                                             </script>";
                                     }
                                     else 
                                     {
@@ -70,5 +76,6 @@
             </div>
         </article>
     </section>
+    <?php require_once("../parte/footer.php");?>
 </body>
 </html>

@@ -2,16 +2,16 @@
     session_start();
     if (!isset($_SESSION['idProf']))
     {
-        header ("location: entrarProfessor.php");
+        header ("location: ../login/entrarProfessor.php");
         exit;
     }
     else 
     {
         // ############### INFORMAÇÕES CLASSES ###############
 
-        require_once("../class/clsProfessor.class.php");
+        require_once("../../class/clsProfessor.class.php");
         $u = new professor;
-        require_once("../class/clsEscola.class.php");
+        require_once("../../class/clsEscola.class.php");
         $o = new escola;
 
 
@@ -36,12 +36,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/molde.css">
-    <link rel="stylesheet" href="../css/stProfessorEscola.css">
+    <link rel="stylesheet" href="../../css/molde.css">
+    <link rel="stylesheet" href="../../css/stProfessorEscola.css">
     <title>Math Easy - Escolas</title>
 </head>
     <body>
-        <?php require_once("headerLogado.php"); ?>
+        <?php require_once("../parte/headerLogado.php"); ?>
         <div class="hdProfessor">
             <h2>Professor - Sessão Escolas</h2>
         </div>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="ptAside2">
                     <div class="user">
-                        <img src="../img/user.png" alt="">
+                        <img src="../../img/user.png" alt="">
                     </div>
                 </div>
                 <div class="ptAside3">

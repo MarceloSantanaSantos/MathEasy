@@ -12,16 +12,18 @@
 <body>
     <!-- HEADER -->
     <header>
-    <div class="hd-left">
-        <img src="img/icon.png">
-        <span><strong>MATH<br>EASY</strong></span>
-    </div>
-    <div class="hd-right">
-        <a style="color: white;" href="index.php">Início</a>
-        <a href="index.php#sobrenos">Sobre Nós</a>
-        <a href="#">Suporte</a>
-    </div>
-</header>
+        <div class="hd-left">           
+            <a href="page/sair.php">
+                <img src="img/icon.png">
+                <span><strong>MATH<br>EASY</strong></span>
+            </a>
+        </div>
+        <div class="hd-right">
+            <a href="index.php">Início</a>
+            <a href="index.php#sobrenos">Sobre Nós</a>
+            <a href="#">Suporte</a>
+        </div>
+    </header>
     <!-- SECTION 01 -->
     <section class="secOne">
         <div class="scOne-left">
@@ -32,8 +34,8 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in orci mauris. In sed vulputate risus, sed facilisis eros. Etiam enim lacus, fringilla ut risus quis, eleifend efficitur enim.
             </p>
             <div>
-                <a href="./page/entrarProfessor.php" class="btnIndex">Sou Professor</a>
-                <a href="./page/entrarAluno.php" class="btnIndex">Sou Aluno</a>
+                <a href="./page/login/entrarProfessor.php" class="btnIndex">Sou Professor</a>
+                <a href="./page/login/entrarAluno.php" class="btnIndex">Sou Aluno</a>
             </div>
         </div>
         <div class="scOne-right">
