@@ -16,12 +16,13 @@
     <?php require_once("../parte/header.php") ?>
     <section>
         <article>
+            <h2>LOGIN PROFESSOR</h2>
             <form method="POST">
-                <input type="text" name="nomeCadProf" id="nomeCadProf" placeholder="Nome Completo">        
-                <input type="email" name="emailCadProf" id="emailCadProf" placeholder="E-mail">        
-                <input type="password" name="senhaCadProf" id="senhaCadProf" placeholder="Senha">        
-                <input type="password" name="confSenhaCadProf" id="confSenhaCadProf" placeholder="Confirmar Senha">
-                <input type="submit" value="Cadastrar">       
+                <input type="text" class="boxLogin" name="nomeCadProf" id="nomeCadProf" placeholder="Nome Completo">        
+                <input type="email" class="boxLogin" name="emailCadProf" id="emailCadProf" placeholder="E-mail">        
+                <input type="password" class="boxLogin" name="senhaCadProf" id="senhaCadProf" placeholder="Senha">        
+                <input type="password" class="boxLogin" name="confSenhaCadProf" id="confSenhaCadProf" placeholder="Confirmar Senha">
+                <input type="submit" class="btnLogin" value="Cadastrar">       
             </form>
             <div>
                 <?php
@@ -45,7 +46,7 @@
                                     {
                                         echo "<script language='javascript' type='text/javascript'>
                                                 alert ('Cadastro efetuado com sucesso, entre para acessar');
-                                                window.location('../../index.php');
+                                                window.location.href='../login/entrarProfessor.php';
                                              </script>";
                                     }
                                     else 

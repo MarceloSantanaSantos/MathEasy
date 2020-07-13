@@ -13,7 +13,7 @@
     <!-- HEADER -->
     <header>
         <div class="hd-left">           
-            <a href="page/sair.php">
+            <a href="page/processamento/sair.php">
                 <img src="img/icon.png">
                 <span><strong>MATH<br>EASY</strong></span>
             </a>
@@ -31,8 +31,7 @@
                 Aprenda matemática mais facilmente
             </h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in orci mauris. In sed vulputate risus, sed facilisis eros. Etiam enim lacus, fringilla ut risus quis, eleifend efficitur enim.
-            </p>
+                Conheça uma forma mais intuitiva, dinâmica e divertida de aprender matemática. O Math Easy te ensinará matemática enquanto você se diverte.</p>
             <div>
                 <a href="./page/login/entrarProfessor.php" class="btnIndex">Sou Professor</a>
                 <a href="./page/login/entrarAluno.php" class="btnIndex">Sou Aluno</a>
@@ -56,7 +55,9 @@
                     Soma - Fração - Divisão - Multiplicação
                 </h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in orci mauris. In sed vulputate risus, sed facilisis eros. Etiam enim lacus, fringilla ut risus quis, eleifend efficitur enim, fringilla ut risus quis, eleifend efficitur enim.
+                    Sente dificuldade em aprender matemática apenas copiando contas da lousa e sentando em uma carteira?
+                    <br>
+                    Entenda como a matemática funciona enquanto mata dragões, esqueletos e até zumbis! Aprender matemática nunca foi tão fácil.
                 </p>
             </div>
         </div>
@@ -77,6 +78,6 @@
         </div>
     </section>
     <!-- FOOTER -->
-    <?php require_once("./page/footer.php")?>
+    <?php require_once("./page/parte/footer.php")?>
 </body>
 </html>

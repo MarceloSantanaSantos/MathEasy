@@ -151,7 +151,7 @@
                                         echo "<tr>".
                                                 "<td>".$row['ano']."</td>".                                                
                                                 "<td>".$row['letra']."</td>".                                                
-                                                "<td>"."<a class='verSalas' href='professorSala.php'>Ver Sala</a>"."</td>".
+                                                "<td>"."<a class='verSalas' href='professorSala.php'>Ver Aluno</a>"."</td>".
                                             "</tr>";
                                         
                                     }

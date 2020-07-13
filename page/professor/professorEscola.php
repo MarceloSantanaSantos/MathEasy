@@ -163,7 +163,7 @@
                                             "<td>".$row['nomeEscola']."</td>".
                                             "<td>".$row['cidadeEscola']."</td>".
                                             "<td>".$row['idEscola']."</td>".
-                                            "<td>"."<a href='professorTurma.php?idEscolaTurma=$idEscolaTurma&nomeEscolaTurma=$nomeEscolaTurma' class='verTurmas'>Ver Turmas</a></td>".
+                                            "<td class='verTurmasBG'>"."<a href='professorTurma.php?idEscolaTurma=$idEscolaTurma&nomeEscolaTurma=$nomeEscolaTurma' class='verTurmas'>Ver Turmas</a></td>".
                                             // "<td>"."<form method='post'><input type='submit' id='vt' name='vt' value='Ver Turmas' class='verTurmas'></form>"."</td>".
                                          "</tr>";
                                 }
