@@ -24,11 +24,10 @@
         public function cadastrarTurma($ano, $letra, $idProf, $idEscolaTurma)
         {
             global $pdo;
-
             $sql = $pdo->prepare("select idTurma from turma where ano = :a and letra = :l and FK_idProf = :fp and FK_idEscola = :f");
             $sql->bindValue(":a",$ano);
             $sql->bindValue(":l",$letra);
-            $sql->bindValue(":fp",$$idProf);
+            $sql->bindValue(":fp",$idProf);
             $sql->bindValue(":f",$idEscolaTurma);
             $sql->execute();
             if ($sql->rowCount() > 0)
@@ -37,7 +36,7 @@
             }
             else 
             {
-                $sql = $pdo->prepare("insert into turma (ano, letra, FK_idProf, FK_idEscola) values (:a, :l: :fp, :f)");
+                $sql = $pdo->prepare("insert into turma (ano, letra, FK_idProf, FK_idEscola) values (:a, :l, :fp, :f)");
                 $sql->bindValue(":a",$ano);
                 $sql->bindValue(":l",$letra);
                 $sql->bindValue(":fp",$idProf);
@@ -61,28 +60,26 @@
             }
         }
 
-        public function removerTurma($turma, $escolaTurma, $idProf)
+        public function removerTurma($ano, $letra, $idProf, $idEscolaTurma)
         {
             global $pdo;
 
-            $sql = $pdo->prepare("delete from turma where turma = :t and escolaTurma = :et and FK_idProf = :f");
-            $sqlVerify = $pdo->prepare("select * from turma where turma = :tv and escolaTurma = :etv and FK_idProf = :fv");
-            $sqlVerify->bindValue(":tv",$turma);
-            $sqlVerify->bindValue(":etv",$escolaTurma);
-            $sqlVerify->bindValue(":fv",$idProf);
-            $sql->bindValue(":t",$turma);
-            $sql->bindValue(":et",$escolaTurma);
-            $sql->bindValue(":f",$idProf);
+            $sql = $pdo->prepare("delete from turma where ano = :a and letra = :l and FK_idProf = :fp and FK_idEscola = :fe");
+            $sql->bindValue(":a",$ano);
+            $sql->bindValue(":l",$letra);
+            $sql->bindValue(":fp",$idProf);
+            $sql->bindValue(":fe",$idEscolaTurma);
             $sql->execute();
-            $sqlVerify->execute();
-            if ($sqlVerify->rowCount() <= 0)
+            if ($sql->rowCount() > 0)
             {
-                return true;
+                $retorno = true;
             }
             else 
             {
-                return false;
+                $retorno = false;
             }
+            return $retorno;
+
         }
 
         public function perfilTurma($idEscolaTurma)

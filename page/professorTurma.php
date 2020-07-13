@@ -64,7 +64,7 @@
                     </div>
                     <!-- Formulário de Gerenciamento de Turma -->
                     <div class="ptAside4">
-                        <form action="" method="POST" id="fmrProfTur" name="fmrProfTur" >
+                        <form method="POST" id="fmrProfTur" name="fmrProfTur" >
                             <h3>Gerenciar Turmas</h3>
                             <!-- Campo de Informações -->
                             <input type="text" id="ano" name="ano" placeholder="Ano">
@@ -100,11 +100,6 @@
                                             }
                                         }
                                     }
-                                    else 
-                                    {
-                                        die();
-                                        // header("Refresh: 0");
-                                    }
                                 }
                                 if (isset($_POST['rmv'])) 
                                 {
@@ -115,22 +110,21 @@
                                         $t->conectar("matheasy", "localhost", "root", "root");
                                         if ($t->msgErro == "")
                                         {
-                                            if ($t->removerTurma($ano, $letra, $escolaTurma, $idProf))
+                                            if ($t->removerTurma($ano, $letra, $idProf, $idEscolaTurma))
                                             {
-                                                header ("location: professorTurma.php");
+                                                header("Refresh: 0");
                                             }
                                             else 
                                             {
-                                                    echo "*Turma não cadastrada";
+                                                ?>
+                                                    <?php echo "*Turma não cadastrada";?>
+                                                <?php
                                             }
                                         }
                                     }
                                     else 
                                     {
-                                        echo "<script language='javascript' type='text/javascript'>
-                                        alert ('Preencha os campos');
-                                        </script>";
-                                        header ("location: professorTurma.php");
+                                        echo "*Preencha os campos";
                                     }
                                 }
                             ?>
@@ -140,7 +134,8 @@
                     <table>
                         <?php
                             echo "<tr>
-                                    <th>TURMA:</th>
+                                    <th>ANO:</th>
+                                    <th>LETRA:</th>
                                     <th>IR PARA:</th>
                                 </tr>";
                             $t->conectar("matheasy", "localhost", "root", "root");
@@ -154,7 +149,8 @@
                                     {
                                         
                                         echo "<tr>".
-                                                "<td>".$row['turma']."</td>".
+                                                "<td>".$row['ano']."</td>".                                                
+                                                "<td>".$row['letra']."</td>".                                                
                                                 "<td>"."<a class='verSalas' href='professorSala.php'>Ver Sala</a>"."</td>".
                                             "</tr>";
                                         

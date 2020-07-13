@@ -18,7 +18,7 @@
     </div>
     <div class="hd-right">
         <a style="color: white;" href="index.php">Início</a>
-        <a href="#">Sobre Nós</a>
+        <a href="index.php#sobrenos">Sobre Nós</a>
         <a href="#">Suporte</a>
     </div>
 </header>
@@ -62,7 +62,7 @@
     <!-- SECTION 03 -->
     <section class="secThree">
         <div class="scThree-up">
-            <h1>Sobre o Projeto Math Easy</h1>
+            <h1 id="sobrenos" >Sobre o Projeto Math Easy</h1>
         </div>
         <div class="scThree-down">
             <p>
