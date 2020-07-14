@@ -15,17 +15,15 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 600px;
+    height: 500px;
     padding: 20px 120px;
     padding-bottom: 25px;
 }
 
-/* ##################### ASIDE  ##################### */
-
 aside {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 40%;
     background-color: #7159c1;
     padding: 8px;
@@ -55,7 +53,6 @@ aside {
     height: 100px;
     width: 100px;
     border-radius: 100%;
-    background-color: whitesmoke;
 }
 
 .user img {
@@ -78,79 +75,31 @@ aside {
     font-size: 20px;
 }
 
-.ptAside3 h5 {
-    font-size: 17px;
-}
-
 .ptAside4 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 200px;
 }
 
-.ptAside4 form {
+.ptAside4 h3 {
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.ptAside5 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
+    height: 50px;
     color: white;
 }
 
-form h3 {
-    font-size: 24px;
-}
-
-form input {
-    height: 25px;
-    width: 220px;
-    margin: 5px;
-    padding: 2px 5px;
-    border-radius: 3px;
-    border: 0px solid;
-}
-
-.gerenciarTurma {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 227px;
-}
-
-.btnTurma{
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    width: 100px;
-    color: #7159c1;
-    text-decoration: none;
-    background-color: rgb(209, 209, 209);
-    border-radius: 5px;
-    margin: 0;
-}
-
-.btnTurma:hover {
-    color: #41336e;
-    background-color: white;
-}
-
-.msgTurma {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.ptAside5 h4 {
     color: white;
-    font-size: 18px;
-    height: 20px;
+    font-size: 20px;
 }
-
-/* ##################### ARTICLE  ##################### */
 
 article {
     display: flex;
@@ -176,7 +125,7 @@ td {
     color: #7d65c9;
 }
 
-.verSalas {
+.verAluno {
     text-decoration: none;
     padding: 6px;
     border-radius: 5px;
@@ -184,6 +133,6 @@ td {
     background-color: rgb(127, 96, 179);
 }
 
-.verSalas:hover {
+.verAluno:hover {
     background-color: rgb(167, 132, 230);
 }
