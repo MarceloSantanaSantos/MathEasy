@@ -44,7 +44,7 @@
         <title>Math Easy - Turmas</title>
     </head>
     <body>
-        <?php require_once("../parte/headerLogado.php"); ?>
+        <?php require_once("../parte/headerLogadoProf.php"); ?>
         <div class="hdProfessor">
             <h2>Escola: <?php echo $nomeEscolaTurma; ?></h2>
         </div>

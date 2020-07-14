@@ -39,7 +39,7 @@
     <title>Math Easy - Escolas</title>
 </head>
     <body>
-        <?php require_once("../parte/headerLogado.php"); ?>
+        <?php require_once("../parte/headerLogadoProf.php"); ?>
         <div class="hdProfessor">
             <h2>Professor - Sessão Escolas</h2>
         </div>
@@ -161,7 +161,7 @@
                                             "<td>".$row['nomeEscola']."</td>".
                                             "<td>".$row['cidadeEscola']."</td>".
                                             "<td>".$row['idEscola']."</td>".
-                                            "<td class='verTurmasBG'>"."<a href='professorTurma.php?idEscolaTurma=$idEscolaTurma&nomeEscolaTurma=$nomeEscolaTurma' class='verTurmas'>Ver Turmas</a></td>".
+                                            "<td class='verTurmasBG'>"."<a href='professorTurma.php?idEscolaTurma=$idEscolaTurma&nomeEscolaTurma=$nomeEscolaTurma' class='verTurmas'>Ver Turmas</a> </td>".
                                             // "<td>"."<form method='post'><input type='submit' id='vt' name='vt' value='Ver Turmas' class='verTurmas'></form>"."</td>".
                                          "</tr>";
                                 }

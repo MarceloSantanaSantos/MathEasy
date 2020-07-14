@@ -1,3 +1,8 @@
+<?php
+    require_once("../../class/clsAluno.class.php");
+    $a = new aluno;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,18 +39,18 @@
             // Verificar se ps campos foram preenchidos
             if (!empty($emailLogAluno) && !empty($senhaLogAluno))
             {
-                $a->conectar("matheasy", "localhost", "root", "root");
+                $a->conectar("matheasy", "localhost", "root", "root");  
                 if ($a->msgErro == "")
                 {
-                    if ($a->logarAluno($emailLogAluno, $senhaLogAluno))
+                    if ($a->logarAluno($emailLogAluno,$senhaLogAluno))
                     {
                         header("location: ../aluno/alunoInicial.php");
                     }
                     else 
                     {
                         echo "<script language='javascript' type='text/javascript'>
-                                alert ('Campos incorretos');
-                                window.location('../page/login/entrarAluno.php');
+                        alert ('Dados Incorretos');
+                        window.location('../page/login/entrarAluno.php');                               
                               </script>";
                     }
                 }

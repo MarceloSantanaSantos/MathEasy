@@ -1,4 +1,4 @@
-.hdProfessor {
+.hdAluno {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.hdProfessor h2 {
+.hdAluno h2 {
     color: #7159c1;
 }
 
@@ -15,12 +15,10 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 600px;
+    height: 400px;
     padding: 20px 120px;
     padding-bottom: 25px;
 }
-
-/* ##################### ASIDE  ##################### */
 
 aside {
     display: flex;
@@ -67,10 +65,19 @@ aside {
 .ptAside3 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 150px;
     color: white;
+}
+
+.ptAside3 h4 {
+    color: white;
+    font-size: 20px;
+}
+
+.ptAside3 h5 {
+    font-size: 17px;
 }
 
 .ptAside3 h4 {
@@ -85,9 +92,18 @@ aside {
 .ptAside4 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: 200px;
+    height: 100%;
+    background-color: #7159c1;
+    border-radius: 5px;
+}
+
+.ptAside4 h3 {
+    text-align: center;
+    font-size: 30px;
+    color: whitesmoke;
+    width: 80%;
 }
 
 .ptAside4 form {
@@ -95,49 +111,53 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    color: white;
+    height: 55%;
+    width: 80%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
+    border-radius: 5px;
 }
 
 form h3 {
     font-size: 24px;
 }
 
-form input {
-    height: 25px;
-    width: 220px;
-    margin: 5px;
-    padding: 2px 5px;
-    border-radius: 3px;
+.boxTurma {
+    height: 18%;
+    width: 80%;
     border: 0px solid;
+    background-color: mintcream;
 }
 
-.gerenciarTurma {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 227px;
+.boxTurma::placeholder{
+    padding-left: 8px;
+    color: #7159c1;
+    font-size: 14px;
 }
 
-.btnTurma{
-    cursor: pointer;
+.btnTurma {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 35px;
-    width: 100px;
-    color: #7159c1;
-    text-decoration: none;
-    background-color: rgb(209, 209, 209);
-    border-radius: 5px;
-    margin: 0;
+    height: 20%;
+    width: 80%;
+    border: 0px solid;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #453675;
+    cursor: pointer;
 }
 
 .btnTurma:hover {
-    color: #41336e;
-    background-color: white;
+    color: #ffffff;
+    background-color: #4a3b7c;
 }
 
 .msgTurma {
@@ -148,43 +168,4 @@ form input {
     color: white;
     font-size: 18px;
     height: 20px;
-}
-
-/* ##################### ARTICLE  ##################### */
-
-article {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 55%;
-    background-color: lightpink;
-}
-
-article table {
-    width: 100%;
-    border-left: 4px solid #7159c1;
-}
-
-th {
-    padding: 10px;
-    color: #7159c1;
-}
-
-td {
-    text-align: center;
-    padding: 8px;
-    color: #7d65c9;
-}
-
-.verSalas {
-    text-decoration: none;
-    padding: 6px;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(127, 96, 179);
-}
-
-.verSalas:hover {
-    background-color: rgb(167, 132, 230);
 }
