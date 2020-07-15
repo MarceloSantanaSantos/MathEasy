@@ -171,6 +171,19 @@
             }
         }
 
+        public function consultarAlunoTurma($idTurma)
+        {
+            global $pdo;
+
+            $sql = $pdo-> prepare("select * from aluno where FK_idTurma = :t");
+            $sql->bindValue(":t", $idTurma);
+            $sql->execute();
+            if ($sql->rowCount() > 0)
+            {
+                return $sql;
+            }
+        }
+
         public function updateIdTurma($idTurma, $idAluno)
         {
             global $pdo;

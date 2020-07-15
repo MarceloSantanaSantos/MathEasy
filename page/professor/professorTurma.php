@@ -14,6 +14,8 @@
         $o = new escola;
         require_once("../../class/clsTurma.class.php");
         $t = new turma;
+        require_once("../../class/clsAluno.class.php");
+        $a = new aluno;
 
         
 
@@ -30,7 +32,7 @@
 
         // ############### REQUISIÇÕES ESCOLA ###############
         $idEscolaTurma = $_GET['idEscolaTurma'];
-        $nomeEscolaTurma = $_GET['nomeEscolaTurma'];     
+        $nomeEscolaTurma = $_GET['nomeEscolaTurma'];   
      }
 ?>
 
@@ -147,11 +149,21 @@
                             {
                                 while ($row=$turmas->fetch())
                                 {            
+                                    $idTurma = $row['idTurma'];
+                                    $u->conectar("matheasy","localhost","root","root");
+                                    if ($u->consultarAlunoTurma($idTurma))
+                                    {
+                                        $link = "<a class='verSalasAtivado' href='professorAluno.php?idTurma=$idTurma'>Ver Alunos</a>";
+                                    }
+                                    else
+                                    {
+                                        $link = "<a class='verSalasDesativado' href='#'>Ver Alunos</a>";
+                                    }
                                     echo "<tr>".
                                             "<td>".$row['ano']."</td>".                                                
                                             "<td>".$row['letra']."</td>".   
                                             "<td>".$row['idTurma']."</td>".                                             
-                                            "<td>"."<a class='verSalas' href='professorAluno.php'>Ver Alunos</a>"."</td>".
+                                            "<td>"."$link"."</td>".
                                         "</tr>";           
                                 }
                             }

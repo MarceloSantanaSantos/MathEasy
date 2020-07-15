@@ -149,7 +149,7 @@
                         $o->conectar("matheasy", "localhost", "root", "root");
                         if ($o->msgErro == "") 
                         {
-                            $escolas = $o->consultarEscolas($idProf);
+                            $escolas = $o->consultarEscola($idProf);
 
                             if ($escolas->rowCount() != 0)
                             {

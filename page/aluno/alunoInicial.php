@@ -84,6 +84,33 @@
                     <h4><?php echo "Turma: $anoTurma"." "."$letraTurma"?></h4>
                     <h4><?php echo "ID Turma: $idTurma"?></h4>
                 </div>
+                <div class="ptAside4">
+                    <form method="POST">
+                        <input type="submit" id='sairTurma' class="btnTurma" name='sairTurma' value='Sair da Turma'>
+                    </form>
+                </div>
+                <div class="msgAlunoTurma">
+                    <?php
+                        if (isset($_POST['sairTurma']))
+                        {
+                            // echo "<script language='javascript' type='text/javascript'>
+                            //         alert('Clicado!');
+                            //       </script>";
+                            $idTurma = null;
+                            $a->conectar("matheasy", "locahost", "root", "root");
+                            if ($a->msgErro == "")
+                            {
+                                if ($a->updateIdTurma($addTurmaId, $idAluno) == false)
+                                {
+                                    echo "<script language='javascript' type='text/javascript'>
+                                            alert('Aluno saiu de Turma!');
+                                            window.location.href='alunoVazio.php';
+                                          </script>";
+                                }
+                            }
+                        }
+                    ?>
+                </div>
             </aside>
             <article></article>
         </section>

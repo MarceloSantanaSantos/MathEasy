@@ -46,7 +46,7 @@
             }
         }
 
-        public function consultarEscolas($idProf)
+        public function consultarEscola($idProf)
         {
             global $pdo;
 

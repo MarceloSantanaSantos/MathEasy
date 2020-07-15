@@ -176,7 +176,7 @@ td {
     color: #7d65c9;
 }
 
-.verSalas {
+.verSalasAtivado {
     text-decoration: none;
     padding: 6px;
     border-radius: 5px;
@@ -184,6 +184,15 @@ td {
     background-color: rgb(127, 96, 179);
 }
 
-.verSalas:hover {
+.verSalasAtivado:hover {
     background-color: rgb(167, 132, 230);
+}
+
+.verSalasDesativado {
+    cursor: default;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(184, 184, 184);
 }

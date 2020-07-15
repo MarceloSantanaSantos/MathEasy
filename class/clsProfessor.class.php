@@ -99,5 +99,31 @@
                 return false;
             }
         }
+
+        public function consultarProfessor($idProf)
+        {
+            global $pdo;
+
+            $sql = $pdo->prepare("select * from professor where idProf = :p");
+            $sql->bindValue(":p", $idProf);
+            $sql->execute();
+            if ($sql->rowCount() > 0)
+            {
+                return $sql;
+            }
+        }
+
+        public function consultarAlunoTurma($idTurma)
+        {
+            global $pdo;
+
+            $sql = $pdo->prepare("select * from aluno where FK_idTurma = :t");
+            $sql->bindValue(":t",$idTurma);
+            $sql->execute();
+            if($sql->rowCount() > 0)
+            {
+                return $sql;
+            }
+        }
     }
 ?>
