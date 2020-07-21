@@ -23,9 +23,6 @@
             <strong>Math Easy</strong>&nbsp; &copy; 2020 - Todos os direitos reservados
         </div>
         <div class="ftDown-right">
-            <a href="#">DIreitos autorais</a>&nbsp;-&nbsp;
-            <a href="#">Termos de uso</a>&nbsp;-&nbsp;
-            <a href="#">Política de privacidade</a>&nbsp;-&nbsp;
-            <a href="#">Consulta de certificados</a>
+            
         </div>
     </div>

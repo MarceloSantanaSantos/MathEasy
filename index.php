@@ -21,7 +21,6 @@
         <div class="hd-right">
             <a href="index.php">Início</a>
             <a href="index.php#sobrenos">Sobre Nós</a>
-            <a href="#">Suporte</a>
         </div>
     </header>
     <!-- SECTION 01 -->
