@@ -1,0 +1,172 @@
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(75, 36, 136, 0.5); /* Black w/ opacity */
+}
+
+.modalUm-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 30%; /* Could be more or less, depending on screen size */
+    height: 30%;
+}
+
+.modalUm-content h2 {
+    font-size: 25px;
+}
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(75, 36, 136, 0.5); /* Black w/ opacity */
+}
+
+
+.modalDois-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 30%; /* Could be more or less, depending on screen size */
+    height: 30%;
+}
+
+.modalDois-content h2 {
+    font-size: 25px;
+}
+
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(75, 36, 136, 0.5); /* Black w/ opacity */
+}
+
+
+.modalTres-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 30%; /* Could be more or less, depending on screen size */
+    height: 30%;
+}
+
+.modalTres-content h2 {
+    font-size: 25px;
+}
+
+.modalFim {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(56, 44, 75, 0.5); /* Black w/ opacity */
+}
+
+
+.modalFim-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 30%; /* Could be more or less, depending on screen size */
+    height: 30%;
+}
+
+.modalFim-content h2 {
+    font-size: 25px;
+}
+
+.modalGO {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(56, 44, 75, 0.5); /* Black w/ opacity */
+}
+
+
+.modalGO-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 30%; /* Could be more or less, depending on screen size */
+    height: 30%;
+}
+
+.modalGO-content h2 {
+    font-size: 25px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 20%;
+}
+
+.btns button {
+    cursor: pointer;
+    width: 40%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0px;
+    background-color: #7159c1;
+    color: #ffffff;
+}
+
+.btns button:hover {
+    background-color: #8970db;
+}

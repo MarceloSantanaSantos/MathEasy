@@ -217,7 +217,16 @@ article {
 }
 
 .dadosJogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 50px;
     height: 85%;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+.dadosJogo h4 {
+    color: white;
+    font-size: 20px;
 }

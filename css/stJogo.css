@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+}
+
+header {
+
+}
+
+.hdJogo {
+    background-color: rgb(187, 164, 240);
+    margin-bottom: 20px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #7159c1;
+    font-size: 23px;
+}

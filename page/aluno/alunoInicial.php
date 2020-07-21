@@ -93,9 +93,6 @@
                     <?php
                         if (isset($_POST['sairTurma']))
                         {
-                            // echo "<script language='javascript' type='text/javascript'>
-                            //         alert('Clicado!');
-                            //       </script>";
                             $idTurma = null;
                             $a->conectar("matheasy", "locahost", "root", "root");
                             if ($a->msgErro == "")
@@ -120,14 +117,15 @@
                     <?php
                         if (isset($_POST['jogar']))
                         {
-                            header ("location: ../game/gameFaseUm.php");
+                            header ("location: ../game/gameFaseUm.php?idAluno=$idAluno");
                         }
                     ?>
                 </div>
                 <div class="articleDown">
                     <div class="hdTabela"><h1>Pontuação</h1></div>  
                     <div class="dadosJogo">
-
+                        <h4>Pontuação: </h4>
+                        <h4>Fase: Tutorial</h4>
                     </div>
                 </div>
             </article>
