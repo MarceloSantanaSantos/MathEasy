@@ -52,6 +52,7 @@
                 $nomeAluno = $row['nomeAluno'];
                 $emailAluno = $row['emailAluno'];
                 $FK_idTurma = $row['FK_idTurma'];
+                $pont = $row['pontuacao'];
             }
         }
 
@@ -120,8 +121,8 @@
                 </div>
                 <h3>Dados do Jogo</h3>
                 <div class="ptDown">
-                    <h4>Pontuação: </h4>
-                    <h4>Fase Liberada: </h4>
+                    <h4>Pontuação: <?php echo $pont;?></h4>
+                    <h4>Fase Liberada: Tutorial</h4>
                 </div>
             </div>
         </aside>

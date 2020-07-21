@@ -33,6 +33,8 @@
             exit;
         }
 
+        $pontuacao += $_GET['pontuacao'];
+        $a->updatePontuacao($idAluno, $pontuacao);
         $dadosAluno = $a->consultarAluno($idAluno);
         if ($dadosAluno->rowCount() != 0)
         {
@@ -41,17 +43,19 @@
                 $nomeAluno = $row['nomeAluno'];
                 $emailAluno = $row['emailAluno'];
                 $FK_idTurma = $row['FK_idTurma'];
+                $pont = $row['pontuacao'];
             }
         }
 
+        
         $dadosTurma = $a->dadosTurma($FK_idTurma);
         while ($row=$dadosTurma->fetch())
         {
             $idTurma = $row['idTurma'];
             $anoTurma = $row['ano'];
             $letraTurma = $row['letra'];
+            
         }
-        $pontuacao = $_GET['pontuacao'];
 
     }
 ?>
@@ -118,7 +122,7 @@
                     <?php
                         if (isset($_POST['jogar']))
                         {
-                            header ("location: ../game/gameFaseUm.php?idAluno=$idAluno");
+                            header ("location: ../game/gameTutorial.php?idAluno=$idAluno");
                         }
                     ?>
                 </div>
@@ -126,7 +130,7 @@
                     <div class="hdTabela"><h1>Pontuação</h1></div>  
                     <div class="dadosJogo">
                         <h4>Pŕoxima Fase Liberada: Tutorial</h4>
-                        <h4>Pontuação: <?php echo $pontuacao?></h4>
+                        <h4>Pontuação: <?php echo $pont?></h4>
                     </div>
                 </div>
             </article>

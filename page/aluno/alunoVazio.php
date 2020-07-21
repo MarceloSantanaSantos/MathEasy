@@ -65,9 +65,9 @@
             <div class="ptAside4">
                 <h3>Entrar em Turma</h3>
                 <form action="" method="post">
-                    <input type="text" id="addTurmaId" name="addTurmaId" placeholder="Id da Turma" class="boxTurma">    
-                    <input type="text" id="addTurmaAno" name="addTurmaAno" placeholder="Ano" class="boxTurma">
-                    <input type="text" id="addTurmaLetra" name="addTurmaLetra" placeholder="Letra" class="boxTurma">
+                    <input type="text" id="addTurmaId" name="addTurmaId" placeholder="Id da Turma" class="boxTurma" maxlength='5'>    
+                    <input type="text" id="addTurmaAno" name="addTurmaAno" placeholder="Ano" class="boxTurma" maxlength='1'>
+                    <input type="text" id="addTurmaLetra" name="addTurmaLetra" placeholder="Letra" class="boxTurma" maxlength='1'>
                     <input type="submit" id="add" name="add" class="btnTurma" value="Adicionar">
                 </form>
                 <div class="msgTurma">

@@ -20,8 +20,8 @@
                 <h2>LOGIN ALUNO</h2>
                 <form action="" method="post" name="fmrLogAluno" id="fmrLogAluno">
                     <!-- Campo de Informações -->
-                    <input type="text" name="emailLogAluno" id="emailLogAluno" placeholder="E-mail" class="boxLogin">
-                    <input type="password" name="senhaLogAluno" id="senhaLogAluno" placeholder="Senha" class="boxLogin">
+                    <input type="text" name="emailLogAluno" id="emailLogAluno" placeholder="E-mail" class="boxLogin" maxlength='100'>
+                    <input type="password" name="senhaLogAluno" id="senhaLogAluno" placeholder="Senha" class="boxLogin" maxlength='50'>
                     <!-- Botão Login -->
                     <input type="submit" value="ENTRAR" class="btnLogin">
                 </form>

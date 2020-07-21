@@ -73,8 +73,8 @@
                     <h3>Gerenciado de Turmas</h3>
                     <form method="POST" id="fmrProfTur" name="fmrProfTur" >    
                         <!-- Campo de Informações -->
-                        <input type="text" id="ano" name="ano" placeholder="Ano">
-                        <input type="text" id="letra" name="letra" placeholder="Letra">
+                        <input type="text" id="ano" name="ano" placeholder="Ano" maxlength='1'>
+                        <input type="text" id="letra" name="letra" placeholder="Letra" maxlength='1'>
                         <!-- Botões Gerenciar Escola -->
                         <div class="gerenciarTurma">
                             <input type="submit" value="Adicionar" name="add" class="btnTurma">

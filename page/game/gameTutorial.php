@@ -68,7 +68,8 @@
     <body>
         <?php require_once("../parte/headerJogo.php");?>
        <div class="hdJogo">
-            <h2>Fase: Tutorial - Colete as Estrelas e <strong>NÃO</strong> toque nas bombas!</h2>
+            <h2 class="fase">Fase: Tutorial</h2>
+            <h2 class="explicacao">Colete as estrelas e <strong>NÃO</strong> toque nas bombas!</h2>
         </div> 
         <div class="modal1" id='ModalUm'>
             <div class="modalUm-content">

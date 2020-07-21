@@ -66,8 +66,8 @@
                     <form action="" method="POST" id="fmrProfEsc" name="fmrProfEsc" >
                         
                         <!-- Campo de Informações -->
-                        <input type="text" id="nomeEscola" name="nomeEscola" placeholder="Nome da Escola">
-                        <input type="text" id="cidadeEscola" name="cidadeEscola" placeholder="Cidade">
+                        <input type="text" id="nomeEscola" name="nomeEscola" placeholder="Nome da Escola" maxlength='100'>
+                        <input type="text" id="cidadeEscola" name="cidadeEscola" placeholder="Cidade" maxlength='100'>
                         <!-- Botões Gerenciar Escola -->
                         <div class="gerenciarEscola">
                             <input type="submit" value="Adicionar" name="add" class="btnEscola">

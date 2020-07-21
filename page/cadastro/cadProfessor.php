@@ -18,10 +18,10 @@
         <article>
             <h2>CADASTRO PROFESSOR(A)</h2>
             <form method="POST">
-                <input type="text" class="boxLogin" name="nomeCadProf" id="nomeCadProf" placeholder="Nome Completo">        
-                <input type="email" class="boxLogin" name="emailCadProf" id="emailCadProf" placeholder="E-mail">        
-                <input type="password" class="boxLogin" name="senhaCadProf" id="senhaCadProf" placeholder="Senha">        
-                <input type="password" class="boxLogin" name="confSenhaCadProf" id="confSenhaCadProf" placeholder="Confirmar Senha">
+                <input type="text" class="boxLogin" name="nomeCadProf" id="nomeCadProf" placeholder="Nome Completo" maxlength='100'>        
+                <input type="email" class="boxLogin" name="emailCadProf" id="emailCadProf" placeholder="E-mail" maxlength='100'>        
+                <input type="password" class="boxLogin" name="senhaCadProf" id="senhaCadProf" placeholder="Senha" maxlength='50'>        
+                <input type="password" class="boxLogin" name="confSenhaCadProf" id="confSenhaCadProf" placeholder="Confirmar Senha" maxlength='50'> 
                 <input type="submit" class="btnLogin" value="Cadastrar">       
             </form>
             <div>

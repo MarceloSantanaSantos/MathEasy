@@ -19,8 +19,8 @@
                 <h2>LOGIN PROFESSOR</h2>
                 <form action="" method="post" name="fmrLogProf" id="fmrLogProf">
                     <!-- Campo de Informações -->
-                    <input type="text" name="emailLogProf" id="emailLogProf" placeholder="E-mail" class="boxLogin">
-                    <input type="password" name="senhaLogProf" id="senhaLogProf" placeholder="Senha" class="boxLogin">
+                    <input type="text" name="emailLogProf" id="emailLogProf" placeholder="E-mail" class="boxLogin" maxlength='100'>
+                    <input type="password" name="senhaLogProf" id="senhaLogProf" placeholder="Senha" class="boxLogin" maxlength='50'>
                     <!-- Botão Login -->
                     <input type="submit" value="ENTRAR" class="btnLogin">
                 </form>

@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="img/icon.ico">
     <link rel="stylesheet" href="./css/molde.css">
     <link rel="stylesheet" href="./css/stIndex.css">
-    <title>Math Easy</title>
+    <title>Math Easy - Início</title>
     <style> .ativado { color: white;} </style>
 </head>
 <body>

@@ -12,13 +12,23 @@ header {
     height: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-h2 {
+.fase {
     color: #7159c1;
     font-size: 23px;
+}
+
+.explicacao {
+    color: #433572;
+    font-size: 23px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #7159c1;
 }
 
 h3 {

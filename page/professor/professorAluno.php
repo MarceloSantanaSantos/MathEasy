@@ -96,7 +96,7 @@
                     <h4>Turma: <?php echo "$ano"." "."$letra";?></h4>
                     <h4>Id: <?php echo "#$idTurma"?></h4>
                     <h4>Quantidade de Alunos: <?php echo $totalAlunos;?></h4>
-  cv               </div>
+                </div>
             </div>
         </aside>
         <article>
