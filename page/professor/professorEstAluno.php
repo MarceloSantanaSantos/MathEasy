@@ -121,8 +121,7 @@
                 <h3>Dados do Jogo</h3>
                 <div class="ptDown">
                     <h4>Pontuação: </h4>
-                    <h4>Fase: </h4>
-                    <h4>Ultima vez que jogou: </h4>
+                    <h4>Fase Liberada: </h4>
                 </div>
             </div>
         </aside>

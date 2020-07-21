@@ -68,7 +68,7 @@
     <body>
         <?php require_once("../parte/headerJogo.php");?>
        <div class="hdJogo">
-            <h2>Fase: Tutorial</h2>
+            <h2>Fase: Tutorial - Colete as Estrelas e <strong>NÃO</strong> toque nas bombas!</h2>
         </div> 
         <div class="modal1" id='ModalUm'>
             <div class="modalUm-content">
@@ -100,6 +100,7 @@
         <div class="modalFim" id='ModalFim'>
             <div class="modalFim-content">
                 <h2>Muito Bem! O tutorial Acabou!</h2>
+                <h3 id="pontuacao">Pontuação: </h3>
                 <div class="btns">
                     <button id='voltar' class='voltar'>Voltar</button>
                 </div>
@@ -159,6 +160,7 @@
     var sair = document.getElementsByClassName("sair")[0];
     var final = false;
     var cont = 0;
+    var pontuacao = document.getElementById("pontuacao");
     
 
     function preload ()
@@ -188,7 +190,7 @@
         platforms.create(750, 220, 'ground');
 
 
-        player = this.physics.add.sprite(100, 450, 'dude');
+        player = this.physics.add.sprite(100, 450, 'dude').setScale(1.2).refreshBody();
 
         player.setBounce(0.2);
         player.setCollideWorldBounds(true);
@@ -257,7 +259,6 @@
 
         function collectStar (player, star)
         {
-            // star.disableBody(true, true);
             if (star.disableBody(true, true))
             {
                 countStar--;
@@ -322,10 +323,12 @@
                         console.log(cont);
                         if (cont == 3)
                         {   
+                            pontuacao.innerHTML ="<h3>Pontuação: "+score+"</h3>";
+                            console.log(score);
                             modalFim.style.display = "block";
                             voltar.onclick = function ()
                             {   
-                                window.location.href = '../aluno/alunoInicial.php';
+                                window.location.href = '../aluno/alunoInicial.php?pontuacao='+score;
                             };
                         }
                     };
@@ -339,15 +342,15 @@
                         console.log(cont);
                         if (cont == 3)
                         {   
+                            pontuacao.innerHTML ="<h3>Pontuação: "+score+"</h3>";
+                            console.log(score);
                             modalFim.style.display = "block";
                             voltar.onclick = function ()
                             {   
-                                window.location.href = '../aluno/alunoInicial.php';
+                                window.location.href = '../aluno/alunoInicial.php?pontuacao='+score;
                             };
                         }          
                     };
-                    starText.setText('Estrelas Restantes: ' + countStar);
-                    this.scene.resume();
                     
                 }
                     

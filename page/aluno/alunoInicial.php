@@ -51,6 +51,7 @@
             $anoTurma = $row['ano'];
             $letraTurma = $row['letra'];
         }
+        $pontuacao = $_GET['pontuacao'];
 
     }
 ?>
@@ -80,7 +81,7 @@
                 <div class="ptAside3">
                     <h4><?php echo "$nomeAluno"?></h4>
                     <h4><?php echo "$emailAluno"?></h4>
-                    <h4><?php echo "Id do Aluno: $idAluno"?></h4>
+                    <h4><?php echo "Id do Aluno: #$idAluno"?></h4>
                     <h4><?php echo "Turma: $anoTurma"." "."$letraTurma"?></h4>
                     <h4><?php echo "ID Turma: #$idTurma"?></h4>
                 </div>
@@ -124,8 +125,8 @@
                 <div class="articleDown">
                     <div class="hdTabela"><h1>Pontuação</h1></div>  
                     <div class="dadosJogo">
-                        <h4>Pontuação: </h4>
-                        <h4>Fase: Tutorial</h4>
+                        <h4>Pŕoxima Fase Liberada: Tutorial</h4>
+                        <h4>Pontuação: <?php echo $pontuacao?></h4>
                     </div>
                 </div>
             </article>

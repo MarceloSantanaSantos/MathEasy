@@ -208,5 +208,29 @@
                 }
             }
         }
+
+        public function updatePontuacao($idAluno, $pontuacao)
+        {
+            global $pdo;
+
+            $sql = $pdo->prepare("update aluno set pontuacao = :p where idAluno = :a");
+            $sql->bindValue(":p",$pontuacao);
+            $sql->bindValue(":a",$idAluno);
+            $sql->execute();
+            if ($sql->rowCount() > 0)
+            {
+                while ($dado=$sql->fetch())
+                {
+                    $pontuacao = $dado['pontuacao'];
+                }
+                if ($pontuacao == null || $pontuacao = '')
+                {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        }
     }
 ?>
