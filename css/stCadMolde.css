@@ -35,6 +35,7 @@ article form {
     align-items: center;
     height: 70%;
     width: 80%;
+    /* background-color: chocolate; */
 }
 
 .boxLogin {
@@ -53,7 +54,6 @@ article form {
 .btnLogin {
     height: 14%;
     width: 80%;
-    margin-top: 23px;
     border: 0px solid;
     font-size: 16px;
     font-weight: bold;

@@ -1,0 +1,68 @@
+.hdProfessor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.hdProfessor h2 {
+    color: #7159c1;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    padding: 20px 120px;
+    padding-bottom: 25px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    background-color: #7159c1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Escola {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.Aluno {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ptUp,.ptDown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+h4 {
+    font-size: 20px;
+}

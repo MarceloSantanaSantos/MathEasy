@@ -82,7 +82,7 @@
                     <h4><?php echo "$emailAluno"?></h4>
                     <h4><?php echo "Id do Aluno: $idAluno"?></h4>
                     <h4><?php echo "Turma: $anoTurma"." "."$letraTurma"?></h4>
-                    <h4><?php echo "ID Turma: $idTurma"?></h4>
+                    <h4><?php echo "ID Turma: #$idTurma"?></h4>
                 </div>
                 <div class="ptAside4">
                     <form method="POST">
@@ -112,7 +112,25 @@
                     ?>
                 </div>
             </aside>
-            <article></article>
+            <article>
+                <div class="articleUp">
+                    <form action="" method="post">
+                        <input class="btnJogar" name="jogar" id="jogar" type="submit" value="JOGAR">
+                    </form>
+                    <?php
+                        if (isset($_POST['jogar']))
+                        {
+                            header ("location: ../game/gameFaseUm.php");
+                        }
+                    ?>
+                </div>
+                <div class="articleDown">
+                    <div class="hdTabela"><h1>Pontuação</h1></div>  
+                    <div class="dadosJogo">
+
+                    </div>
+                </div>
+            </article>
         </section>
         <?php require_once("../parte/footer.php");?>
     </body>

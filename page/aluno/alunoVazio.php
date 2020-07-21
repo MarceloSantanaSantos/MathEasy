@@ -57,7 +57,7 @@
             </div>
             <div class="ptAside3">
                 <h4>Nome: <?php echo $nomeAluno;?></h4>
-                <h4>ID Aluno: <?php echo $idAluno?></h4>
+                <h4>ID Aluno: <?php echo "#$idAluno"?></h4>
                 <h4>E-mail: <?php echo $emailAluno?></h4>
             </div>
         </aside>

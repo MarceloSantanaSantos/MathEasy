@@ -73,25 +73,30 @@
     </div>
     <section>
         <aside>
-            <div class="ptAside1">
-                <h3>Perfil Professor</h3>
-            </div>
-            <div class="ptAside2">
-                <div class="user">
-                    <img src="../../img/user.png">
+            <div class="ptProf">
+                <div class="ptAside1">
+                    <h3>Perfil do Professor</h3>
+                </div>
+                <div class="ptAside2">
+                    <div class="user">
+                        <img src="../../img/user.png">
+                    </div>
+                </div>
+                <div class="ptAside3">
+                    <h4><?php echo $nomeProfessor;?></h4>
+                    <h5>Id: <?php echo "#$idProf";?></h5>
+                    <h5><?php echo $emailProfessor;?></h5>
                 </div>
             </div>
-            <div class="ptAside3">
-                <h4>Nome: <?php echo $nomeProfessor;?></h4>
-                <h4>E-mail: <?php echo $emailProfessor;?></h4>
-                <h4>Id Professor: <?php echo $idProf;?></h4>
-            </div>
-            <div class="ptAside4">
-                <h3>Dados Turma</h3>
-            </div>
-            <div class="ptAside5">
-                <h4>Turma: <?php echo "$ano"." "."$letra";?></h4>
-                <h4>Quantidade de Alunos: <?php echo $totalAlunos;?></h4>
+            <div class="ptTurma">
+                <div class="ptAside4">
+                    <h3>Dados Turma</h3>
+                </div>
+                <div class="ptAside5">
+                    <h4>Turma: <?php echo "$ano"." "."$letra";?></h4>
+                    <h4>Id: <?php echo "#$idTurma"?></h4>
+                    <h4>Quantidade de Alunos: <?php echo $totalAlunos;?></h4>
+  cv               </div>
             </div>
         </aside>
         <article>
@@ -119,7 +124,7 @@
                                         "<td>".$idAluno."</td>".
                                         "<td>".$emailAluno."</td>".
                                         "<td>".
-                                            "<a href='professorPerfilAluno.php?idAluno=$idAluno' class='verAluno'>Ver Aluno</a>".
+                                            "<a href='professorEstAluno.php?idAluno=$idAluno&idTurma=$idTurma' class='verAluno'>Ver Aluno</a>".
                                         "</td>".
                                      "</tr>";
                             }

@@ -21,15 +21,18 @@
 
 
         // ############### REQUISIÇÕES PROFESSOR ###############
-        $nomeProfessor = "";
         $idProf = $_SESSION['idProf'];
-        $u->conectar("matheasy","localhost","root","root");
-        if ($u->msgErro == "")
-        {
-            $nomeProfessor = $u->perfilProfessor($idProf);
-        }
-        
 
+        $u->conectar("matheasy", "localhost", "root", "root");
+        $dadosProfessor = $u->consultarProfessor($idProf);
+        if ($dadosProfessor->rowCount() != 0)
+        {
+            while ($row=$dadosProfessor->fetch())
+            {
+                $nomeProfessor = $row['nomeProf'];
+                $emailProfessor = $row['emailProf'];
+            }
+        }
         // ############### REQUISIÇÕES ESCOLA ###############
         $idEscolaTurma = $_GET['idEscolaTurma'];
         $nomeEscolaTurma = $_GET['nomeEscolaTurma'];   
@@ -53,7 +56,7 @@
         <section>
             <aside>
                 <div class="ptAside1">
-                    <h3>Gestão do Professor</h3>
+                    <h3>Perfil do Professor</h3>
                 </div>
                 <div class="ptAside2">
                     <div class="user">
@@ -61,13 +64,14 @@
                     </div>
                 </div>
                 <div class="ptAside3">
-                    <h4>Nome: <?php echo $nomeProfessor;?></h4>
-                    <h5>ID Professor: <?php echo $idProf?></h5>
+                    <h4><?php echo $nomeProfessor;?></h4>
+                    <h5>ID: <?php echo "#$idProf"?></h5>
+                    <h5><?php echo $emailProfessor;?></h5>
                 </div>
                 <!-- Formulário de Gerenciamento de Turma -->
                 <div class="ptAside4">
-                    <form method="POST" id="fmrProfTur" name="fmrProfTur" >
-                        <h3>Gerenciar Turmas</h3>
+                    <h3>Gerenciado de Turmas</h3>
+                    <form method="POST" id="fmrProfTur" name="fmrProfTur" >    
                         <!-- Campo de Informações -->
                         <input type="text" id="ano" name="ano" placeholder="Ano">
                         <input type="text" id="letra" name="letra" placeholder="Letra">

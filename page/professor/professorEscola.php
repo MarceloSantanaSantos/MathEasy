@@ -16,15 +16,17 @@
 
         // ############### REQUISIÇÕES PROFESSOR ###############
 
-        $nomeProfessor = "";
         $idProf = $_SESSION['idProf'];
+
         $u->conectar("matheasy", "localhost", "root", "root");
-        if ($u->msgErro == "")
+        $dadosProfessor = $u->consultarProfessor($idProf);
+        if ($dadosProfessor->rowCount() != 0)
         {
-            $nomeProfessor = $u->perfilProfessor($idProf);
-        }
-        else {
-            die();
+            while ($row=$dadosProfessor->fetch())
+            {
+                $nomeProfessor = $row['nomeProf'];
+                $emailProfessor = $row['emailProf'];
+            }
         }
     }
 ?>
@@ -46,21 +48,23 @@
         <section>
             <aside>
                 <div class="ptAside1">
-                    <h3>Gestão do Professor</h3>
+                    <h3>Perfil do Professor</h3>
                 </div>
-                <div class="ptAside2">
-                    <div class="user">
-                        <img src="../../img/user.png" alt="">
+                    <div class="ptAside2">
+                        <div class="user">
+                            <img src="../../img/user.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="ptAside3">
-                    <h4>Nome: <?php echo $nomeProfessor;?></h4>
-                    <h5>ID Professor: <?php echo $idProf?></h5>
-                </div>
+                    <div class="ptAside3">
+                        <h4><?php echo $nomeProfessor;?></h4>
+                        <h5>ID: <?php echo "#$idProf"?></h5>
+                        <h5><?php echo $emailProfessor?></h5>
+                    </div>
                 <!-- Formulário de Gerenciamento de Escolas -->
                 <div class="ptAside4">
+                    <h3>Gerenciador de Escolas</h3>
                     <form action="" method="POST" id="fmrProfEsc" name="fmrProfEsc" >
-                        <h3>Gerenciar Escolas</h3>
+                        
                         <!-- Campo de Informações -->
                         <input type="text" id="nomeEscola" name="nomeEscola" placeholder="Nome da Escola">
                         <input type="text" id="cidadeEscola" name="cidadeEscola" placeholder="Cidade">
@@ -71,7 +75,7 @@
                         </div>
                     </form>
                 </div>
-                    <div class="msgEscola">
+                <div class="msgEscola">
                         <?php
                             //############### ADICIONAR ESCOLA ###############
                             if (isset($_POST['add'])) 
@@ -90,7 +94,7 @@
                                         else 
                                         {
                                             ?>
-                                                <?php echo "*Escola já cadastrada";?>
+                                                <?php echo "* Escola já cadastrada";?>
                                             <?php
                                         }
                                     }
@@ -120,7 +124,7 @@
                                         else 
                                         {
                                             ?>
-                                                <?php echo "*Escola não cadastrada";?>
+                                                <?php echo "* Escola não cadastrada";?>
                                             <?php
                                         }
                                     }
@@ -134,7 +138,7 @@
                                 }
                             }
                         ?>
-                    </div>
+                </div>
             </aside>
             <!-- Tabela de Escolas -->
             <article>

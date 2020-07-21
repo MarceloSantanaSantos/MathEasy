@@ -25,7 +25,8 @@ section {
 aside {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
     width: 40%;
     background-color: #7159c1;
     padding: 8px;
@@ -37,6 +38,7 @@ aside {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
 .ptAside1 h3 {
@@ -67,10 +69,10 @@ aside {
 .ptAside3 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    height: 50px;
-    color: white;
+    color: white;  
+    height: 15%;
 }
 
 .ptAside3 h4 {
@@ -85,9 +87,10 @@ aside {
 .ptAside4 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 200px;
+    height: 230px;
+    width: 80%;
 }
 
 .ptAside4 form {
@@ -95,18 +98,22 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 70%;
+    width: 100%;
     color: white;
 }
 
-form h3 {
-    font-size: 24px;
+.ptAside4 h3 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    height: 20%;
 }
 
 form input {
     height: 25px;
-    width: 220px;
-    margin: 5px;
+    width: 80%;
     padding: 2px 5px;
     border-radius: 3px;
     border: 0px solid;
@@ -115,9 +122,9 @@ form input {
 .gerenciarEscola {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 227px;
+    width: 82%;
 }
 
 .btnEscola {
@@ -128,11 +135,12 @@ form input {
     align-items: center;
     height: 35px;
     width: 100px;
-    color: #7159c1;
+    color: #8b76cf;
     text-decoration: none;
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     margin: 0;
+    font-weight: bold;
 }
 
 .btnEscola:hover {
@@ -145,9 +153,10 @@ form input {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 18px;
-    height: 20px;
+    color: rgb(34, 23, 65);
+    font-size: 22px;
+    height: 30px;
+    width: 80%;
 }
 
 /* ##################### ARTICLE  ##################### */

@@ -15,10 +15,12 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 400px;
+    height: 450px;
     padding: 20px 120px;
-    padding-bottom: 25px;
+    padding-bottom: 70px;
 }
+
+/* =========================ASIDE======================== */
 
 aside {
     display: flex;
@@ -28,6 +30,7 @@ aside {
     background-color: #7159c1;
     padding: 8px;
     border-radius: 5px;
+    height: 450px;
 }
 
 .ptAside1 {
@@ -67,7 +70,7 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: 200px;
     color: white;
 }
 
@@ -106,14 +109,6 @@ aside {
     align-items: center;
     height: 100%;
     width: 80%;
-}
-
-article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 40%;
-    border-radius: 5px;
 }
 
 .boxTurma {
@@ -158,4 +153,71 @@ article {
     color: white;
     font-size: 18px;
     height: 20px;
+}
+
+/* ========================ARTICLE======================== */
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    border-radius: 5px;
+    height: 450px;
+    border-radius: 5px;
+}
+
+.articleUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    background-color: #7159c1;
+    border-radius: 5px;
+}
+
+.btnJogar {
+    cursor: pointer;
+    height: 35px;
+    width: 130px;
+    font-size: 18px;
+    font-weight: bolder;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #503f8a;
+}
+
+.btnJogar:hover {
+    background-color: #ffffff;
+    color: #503f8a;
+}
+
+.articleDown {
+    height: 50%;
+    width: 100%;
+    background-color: #7159c1;
+    border-radius: 5px;
+}
+
+.hdTabela {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #503f8a;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 15%;
+}
+
+.dadosJogo {
+    height: 85%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }

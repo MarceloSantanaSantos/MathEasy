@@ -20,14 +20,25 @@ section {
     padding-bottom: 25px;
 }
 
+/* ##################### ASIDE  ##################### */
+
 aside {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     width: 40%;
     background-color: #7159c1;
     padding: 8px;
     border-radius: 5px;
+}
+
+.ptProf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
 }
 
 .ptAside1 {
@@ -47,6 +58,7 @@ aside {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
 .user {
@@ -64,15 +76,23 @@ aside {
 .ptAside3 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    height: 50px;
-    color: white;
+    color: white;  
+    height: 25%;
 }
 
 .ptAside3 h4 {
     color: white;
     font-size: 20px;
+}
+
+.ptAside3 h5 {
+    font-size: 17px;
+}
+
+.ptTurma {
+    height: 30%;
 }
 
 .ptAside4 {
@@ -90,9 +110,9 @@ aside {
 .ptAside5 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    height: 50px;
+    height: 70%;
     color: white;
 }
 
