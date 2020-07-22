@@ -1,9 +1,0 @@
-Script População para Teste
-
-insert into aluno (nomeAluno, emailAluno, senhaAluno) values ('Jonas', 'jonas@gmail.com', '123');
-
-insert into aluno (nomeAluno, emailAluno, senhaAluno) values ('Gabriel', 'gabriel@gmail.com', '123');
-
-insert into professor (nomeProf, emailProf, senhaProf) values ('Miguel', 'miguel@gmail.com', '123');
-
-insert into professor (nomeProf, emailProf, senhaProf) values ('Lucas', 'lucas@gmail.com', '123');

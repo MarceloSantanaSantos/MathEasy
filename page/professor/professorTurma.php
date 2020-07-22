@@ -1,6 +1,6 @@
 <?php
      session_start();
-     if (!isset($_SESSION['idProf']) && !isset($_SESSION['IdEscolaTurma']))
+     if (!isset($_SESSION['idProf']))
      {
          header ("location: entrarProfessor.php");
          exit;
@@ -157,7 +157,7 @@
                                     $u->conectar("matheasy","localhost","root","root");
                                     if ($u->consultarAlunoTurma($idTurma))
                                     {
-                                        $link = "<a class='verSalasAtivado' href='professorAluno.php?idTurma=$idTurma'>Ver Alunos</a>";
+                                        $link = "<a class='verSalasAtivado' href='professorAluno.php?idTurma=$idTurma&idEscola=$idEscolaTurma'>Ver Alunos</a>";
                                     }
                                     else
                                     {

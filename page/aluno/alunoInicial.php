@@ -105,7 +105,7 @@
                                 if ($a->updateIdTurma($addTurmaId, $idAluno) == false)
                                 {
                                     echo "<script language='javascript' type='text/javascript'>
-                                            alert('Aluno saiu de Turma!');
+                                            
                                             window.location.href='alunoVazio.php';
                                           </script>";
                                 }
@@ -122,6 +122,7 @@
                     <?php
                         if (isset($_POST['jogar']))
                         {
+                            // header ("location: ../game/gameTutorial.php?idAluno=$idAluno");
                             header ("location: ../game/gameTutorial.php?idAluno=$idAluno");
                         }
                     ?>

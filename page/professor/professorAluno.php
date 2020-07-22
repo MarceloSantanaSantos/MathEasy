@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!isset($_SESSION['idProf']) && !isset($_SESSION['IdEscolaTurma']))
+    if (!isset($_SESSION['idProf']))
     {
         header ("location: entrarProfessor.php");
         exit;
@@ -21,7 +21,7 @@
 
         $u->conectar("matheasy", "localhost", "root", "root");
         $dadosProfessor = $u->consultarProfessor($idProf);
-        if ($dadosProfessor->rowCount() != 0)
+        if ($dadosProfessor->rowCount() > 0)
         {
             while ($row=$dadosProfessor->fetch())
             {
@@ -31,7 +31,7 @@
         }
         $o->conectar("matheasy", "localhost", "root", "root");
         $dadosEscola = $o->consultarEscola($idProf);
-        if ($dadosEscola->rowCount() != 0)
+        if ($dadosEscola->rowCount() > 0)
         {
             while ($row=$dadosEscola->fetch())
             {
@@ -40,15 +40,18 @@
                 $cidadeEscola = $row['cidadeEscola'];
             }
         }
+
         $idTurma = $_GET['idTurma'];
+
         $sqlTotalTurma = $u->consultarAlunoTurma($idTurma);
         $totalAlunos = $sqlTotalTurma->rowCount();
 
+        $idTurma = $_GET['idTurma'];
         $t->conectar("matheasy", "localhost", "root", "root");
-        $dadosTurma = $t->consultarTurma($idEscola, $idProf);
-        if ($dadosTurma->rowCount() >0)
+        $sqlTurma = $t->consultarTurma($idEscola, $idProf);
+        if ($sqlTurma->rowCount() > 0)
         {
-            while ($row=$dadosTurma->fetch())
+            while ($row=$sqlTurma->fetch())
             {
                 $ano = $row['ano'];
                 $letra = $row['letra'];

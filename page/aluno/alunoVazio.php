@@ -92,7 +92,7 @@
                                         if ($a->updateIdTurma($addTurmaId, $idAluno))
                                         {
                                             echo "<script language='javascript' type='text/javascript'>
-                                                alert('Aluno entrou em uma turma!');
+                                                
                                                 window.location.href='alunoInicial.php';
                                               </script>";
                                         }

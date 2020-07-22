@@ -5,7 +5,7 @@
                 Math Easy
             </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in orci mauris. In sed vulputate risus, sed facilisis eros. Etiam enim lacus, fringilla ut risus quis, eleifend efficitur enim.
+            Copyright©2020, MathEasy. Todos os direitos reservados. Todos os textos, imagens, gráficos, animações, vídeos, músicas, sons e outros materiais são protegidos por direitos autorais e outros direitos de propriedade intelectual pertencentes à MathEasy.
             </p>
         </div>
         <div class="ftUp-right">
